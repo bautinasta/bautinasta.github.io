@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta property="og:title" content="Bautista Nasta · Data & Automation Specialist">
-<meta property="og:description" content="Interactive case studies in AI agents, ERP automation and process automation, rebuilt with fictitious data.">
+<meta property="og:description" content="Interactive case studies in AI agents, ERP automation, process automation and an AI consultancy, rebuilt with fictitious data.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bautinasta.github.io/">
 <meta name="twitter:card" content="summary">
@@ -117,6 +117,16 @@ h1,h2{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01e
 .short{display:grid;gap:6px;margin:0;padding:0;list-style:none}
 .short li{display:flex;justify-content:space-between;gap:10px;font-size:14px;background:var(--surface2);border-radius:8px;padding:7px 10px}
 .short li b{font:600 12.5px var(--mono);color:var(--good)}
+.score-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font-size:14.5px}
+.gauge{height:10px;background:var(--surface2);border-radius:6px;overflow:hidden}
+.gfill{display:block;height:100%;background:var(--good);border-radius:6px}
+.tracker{display:grid;gap:6px}
+.trow{display:grid;grid-template-columns:minmax(0,1.4fr) .6fr 1.2fr .9fr;gap:8px;align-items:center;font-size:14px;background:var(--surface2);border-radius:8px;padding:8px 10px}
+.trow.head{background:none;font:600 11.5px var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding-block:0}
+.trow span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sbar{display:inline-block;width:38px;height:6px;background:var(--line);border-radius:4px;margin-right:6px;vertical-align:middle;overflow:hidden}
+.sbar i{display:block;height:100%;background:var(--accent);transition:width .8s ease}
+.trow.flash{outline:2px solid var(--good)}
 footer{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:24px}
 footer h2{font-size:26px}
 @media (max-width:780px){.case{grid-template-columns:minmax(0,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:80px 1fr 44px}}
@@ -129,7 +139,7 @@ footer h2{font-size:26px}
   <header class="hero">
     <div class="eyebrow">Data &amp; Automation Specialist · Sydney</div>
     <h1>I turn manual operations into <span>automated, AI-assisted systems</span>.</h1>
-    <p>Hi, I'm Bautista. At a US food manufacturer with two plants, I built the Python jobs, data-quality controls, AI agents and dashboards that now run the company's reporting. Pick a case below and try the demo. Every demo uses fictitious data.</p>
+    <p>Hi, I'm Bautista. I design, direct and verify automation systems, and build them with Claude Code as my engineering partner. At a US food manufacturer with two plants, that meant fully automated reporting, an ERP AI assistant and 25 human-in-the-loop agents. I also co-founded a small AI consultancy for SMEs. Pick a case below and try the demo. Every demo uses fictitious data.</p>
     <div class="metrics">
       <button class="metric" type="button" data-go="netsuite"><b>50+</b><small>people company-wide use my ERP AI assistant, 24/7</small><em>See case →</em></button>
       <button class="metric" type="button" data-go="agents"><b>25</b><small>Claude agents on a human-in-the-loop model</small><em>See case →</em></button>
@@ -147,7 +157,8 @@ footer h2{font-size:26px}
       <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>01</span>AI agents</button>
       <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>02</span>NetSuite Expert</button>
       <button class="tab" role="tab" id="t-reporting" aria-controls="reporting" data-tab="reporting"><span>03</span>Automated reporting</button>
-      <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>04</span>Side project</button>
+      <button class="tab" role="tab" id="t-venture" aria-controls="venture" data-tab="venture"><span>04</span>AI consultancy</button>
+      <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>05</span>Side project</button>
     </div>
   </nav>
 
@@ -232,6 +243,34 @@ footer h2{font-size:26px}
     </div>
   </section>
 
+  <section class="case" role="tabpanel" id="venture" aria-labelledby="t-venture" hidden>
+    <div class="txt">
+      <div class="eyebrow">Co-founder · AI consultancy for SMEs</div>
+      <h2>A client-acquisition channel, from zero to live in one month</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>A services company sold almost only through referrals and had no channel of its own to reach new corporate clients.</dd></div>
+        <div><dt>What we built</dt><dd>The full channel: outbound email, an interactive quoting tool, privacy-friendly engagement tracking and a custom CRM with a conversion funnel. I lead delivery without writing the code: I set scope and priorities, validate every release against real-world conditions and manage the client and their vendors.</dd></div>
+      </dl>
+      <p class="result">Live in <b>one month</b>, on a <b>results-based contract</b>. Email authentication, broken for four years, went from <b>6 to 9/10</b>.</p>
+      <div class="stack"><span>AI-assisted development</span><span>email deliverability</span><span>CRM</span><span>analytics</span></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Engagement tracker · fictitious companies</span><button class="btn small primary" type="button" id="vt-run">▶ Simulate a visit</button></div>
+      <div class="score-row">
+        <span>Email authentication</span>
+        <span class="gauge"><span class="gfill" style="width:90%"></span></span>
+        <b class="ok">6 → 9/10</b>
+      </div>
+      <div class="tracker" id="vt-list">
+        <div class="trow head"><span>Company</span><span>Opened</span><span>Read</span><span>Quote</span></div>
+        <div class="trow"><span>Northwind Events</span><span class="ok">✓</span><span><i class="sbar"><i style="width:100%"></i></i>4m 10s</span><span class="ok">Yes</span></div>
+        <div class="trow"><span>Harbour Legal</span><span class="ok">✓</span><span><i class="sbar"><i style="width:60%"></i></i>1m 32s</span><span class="t">—</span></div>
+        <div class="trow"><span>Bluegum Health</span><span class="t">—</span><span><i class="sbar"><i style="width:0%"></i></i>—</span><span class="t">—</span></div>
+      </div>
+      <p class="note">Tracks what each company does with the proposal, with no personal data collected from anyone.</p>
+    </div>
+  </section>
+
   <section class="case" role="tabpanel" id="project" aria-labelledby="t-project" hidden>
     <div class="txt">
       <div class="eyebrow">Personal AI automation project</div>
@@ -274,7 +313,7 @@ footer h2{font-size:26px}
   const $ = id => document.getElementById(id);
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
-  const TABS = ["agents", "netsuite", "reporting", "project"];
+  const TABS = ["agents", "netsuite", "reporting", "venture", "project"];
 
   function show(id, focus) {
     if (!TABS.includes(id)) id = "agents";
@@ -293,8 +332,8 @@ footer h2{font-size:26px}
   document.querySelector(".tablist").addEventListener("keydown", e => {
     const i = TABS.indexOf(document.activeElement.dataset.tab);
     if (i < 0) return;
-    if (e.key === "ArrowRight") show(TABS[(i + 1) % 4], true);
-    if (e.key === "ArrowLeft") show(TABS[(i + 3) % 4], true);
+    if (e.key === "ArrowRight") show(TABS[(i + 1) % TABS.length], true);
+    if (e.key === "ArrowLeft") show(TABS[(i + TABS.length - 1) % TABS.length], true);
   });
   document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
     show(b.dataset.go);
@@ -359,6 +398,22 @@ footer h2{font-size:26px}
     }
     $("rp-cap").textContent = "Delivered on time · 1 record held for a person";
     running = false; $("rp-run").disabled = false;
+  });
+
+  let vtDone = false;
+  $("vt-run").addEventListener("click", async () => {
+    if (vtDone) return; vtDone = true; $("vt-run").disabled = true;
+    const row = $("vt-list").children[3], cells = row.children;
+    row.classList.add("flash");
+    cells[1].className = "ok"; cells[1].textContent = "✓";
+    await wait(500);
+    const bar = cells[2].querySelector(".sbar i");
+    let secs = 0;
+    for (let k = 0; k <= 10; k++) { bar.style.width = (k * 8.5) + "%"; secs = k * 17; cells[2].lastChild.textContent = Math.floor(secs / 60) + "m " + String(secs % 60).padStart(2, "0") + "s"; await wait(120); }
+    await wait(300);
+    cells[3].className = "ok"; cells[3].textContent = "Yes";
+    $("vt-run").textContent = "✓ Visit logged";
+    setTimeout(() => row.classList.remove("flash"), 1500);
   });
 
   const fills = [...document.querySelectorAll(".fill")], nums = [...document.querySelectorAll(".v[data-n]")];
