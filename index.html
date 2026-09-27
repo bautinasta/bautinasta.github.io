@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta property="og:title" content="Bautista Nasta · Data & Automation Specialist">
-<meta property="og:description" content="Case studies in AI agents, ERP automation and process automation, rebuilt with fictitious data.">
+<meta property="og:description" content="Interactive case studies in AI agents, ERP automation and process automation, rebuilt with fictitious data.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bautinasta.github.io/">
 <meta name="twitter:card" content="summary">
 <title>Bautista Nasta · Data & Automation Specialist</title>
-<meta name="description" content="Data & Automation Specialist in Sydney. Case studies in process automation, applied AI and ERP.">
+<meta name="description" content="Data & Automation Specialist in Sydney. Interactive case studies in AI agents, ERP automation and process automation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
@@ -17,7 +17,7 @@
 :root{
   --bg:#f7f9fb; --surface:#ffffff; --surface2:#eef2f6; --line:#dde3ea;
   --ink:#0f1b2d; --muted:#556275; --dim:#8a95a5;
-  --accent:#1f5eff; --accent-soft:#e6edff; --good:#0e9f6e; --good-soft:#e3f6ee; --warn:#b7791f; --warn-soft:#fdf3e1;
+  --accent:#1f5eff; --accent-ink:#ffffff; --accent-soft:#e6edff; --good:#0e9f6e; --good-soft:#e3f6ee; --warn:#b7791f; --warn-soft:#fdf3e1; --bad:#d64545; --bad-soft:#fdecec;
   --display:"Manrope",system-ui,sans-serif;
   --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
@@ -26,79 +26,101 @@
   color-scheme:dark;
   --bg:#0b1220; --surface:#121b2d; --surface2:#1a2539; --line:#27344d;
   --ink:#eaf0fa; --muted:#a3afc4; --dim:#6f7c93;
-  --accent:#6e9bff; --accent-soft:#1a2b52; --good:#34d399; --good-soft:#123528; --warn:#f2b84b; --warn-soft:#3a2c12;
+  --accent:#6e9bff; --accent-ink:#0b1220; --accent-soft:#1a2b52; --good:#34d399; --good-soft:#123528; --warn:#f2b84b; --warn-soft:#3a2c12; --bad:#f87171; --bad-soft:#3a1717;
 }}
 :root[data-theme="dark"]{
   color-scheme:dark;
   --bg:#0b1220; --surface:#121b2d; --surface2:#1a2539; --line:#27344d;
   --ink:#eaf0fa; --muted:#a3afc4; --dim:#6f7c93;
-  --accent:#6e9bff; --accent-soft:#1a2b52; --good:#34d399; --good-soft:#123528; --warn:#f2b84b; --warn-soft:#3a2c12;
+  --accent:#6e9bff; --accent-ink:#0b1220; --accent-soft:#1a2b52; --good:#34d399; --good-soft:#123528; --warn:#f2b84b; --warn-soft:#3a2c12; --bad:#f87171; --bad-soft:#3a1717;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
+html{overflow-x:hidden}
 body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);margin:0}
-.wrap{max-width:980px;margin:0 auto;padding-inline:20px;padding-block:40px 64px;display:grid;gap:72px}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:36px 56px;display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+.wrap>*,.case>*{min-width:0}
 a{color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01em}
 .eyebrow{font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.hero{display:grid;gap:22px}
-.hero h1{font-weight:800;font-size:clamp(34px,6vw,58px);line-height:1.05}
+.hero{display:grid;gap:18px}
+.hero h1{font-weight:800;font-size:clamp(32px,5.6vw,54px);line-height:1.06}
 .hero h1 span{color:var(--accent)}
-.hero p{margin:0;max-width:62ch;color:var(--muted);font-size:19px}
-.hero p.avail{font:600 15px/1.5 var(--body);color:var(--ink);background:var(--accent-soft);border-radius:10px;padding:10px 14px;max-width:none}
-.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
-.metric{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;gap:4px}
-.metric b{font:600 30px/1 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
-.metric small{color:var(--muted);font-size:14px;line-height:1.35}
+.hero p{margin:0;max-width:64ch;color:var(--muted);font-size:18.5px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{all:unset;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:4px;transition:border-color .15s}
+.metric:hover{border-color:var(--accent)}
+.metric b{font:600 28px/1 var(--mono);font-variant-numeric:tabular-nums}
+.metric small{color:var(--muted);font-size:13.5px;line-height:1.35}
+.metric em{font:600 12px var(--mono);font-style:normal;color:var(--accent)}
 .links{display:flex;flex-wrap:wrap;gap:10px}
-.btn{font:700 15px/1 var(--display);text-decoration:none;padding:13px 18px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.case{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
-.case:nth-of-type(even) .demo{order:-1}
+.btn{font:700 15px/1 var(--display);text-decoration:none;padding:12px 16px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--surface);cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.small{font-size:13px;padding:9px 12px}
+.btn.good{background:var(--good);border-color:var(--good);color:#fff}
+.btn.bad{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,var(--line));background:transparent}
+.btn[disabled]{opacity:.45;cursor:default}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);padding-block:10px;margin-inline:-20px;padding-inline:20px;border-bottom:1px solid var(--line)}
+.tablist{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tablist::-webkit-scrollbar{display:none}
+.tab{all:unset;cursor:pointer;white-space:nowrap;font:700 15px/1 var(--display);padding:11px 14px;border-radius:999px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.tab span{font:600 11px var(--mono);color:var(--dim)}
+.tab:hover{color:var(--ink);background:var(--surface2)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.tab[aria-selected="true"] span{color:var(--bg);opacity:.7}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
 .case .txt{display:grid;gap:14px}
-.case h2{font-size:clamp(24px,3.4vw,32px);line-height:1.15}
+.case h2{font-size:clamp(24px,3.2vw,31px);line-height:1.15}
 .case dl{margin:0;display:grid;gap:10px}
 .case dt{font:600 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-.case dd{margin:2px 0 0;color:var(--ink)}
-.result{background:var(--good-soft);color:var(--ink);border-radius:10px;padding:10px 14px}
+.case dd{margin:3px 0 0}
+.result{background:var(--good-soft);border-radius:10px;padding:10px 14px;margin:0}
 .result b{color:var(--good)}
 .stack{display:flex;flex-wrap:wrap;gap:6px}
 .stack span{font:500 12.5px/1 var(--mono);background:var(--surface2);color:var(--muted);padding:6px 9px;border-radius:6px}
-.demo{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:12px;box-shadow:0 12px 34px -22px #0f1b2d55}
-.demo .cap{font:500 12px/1.3 var(--mono);color:var(--dim)}
-/* pipeline */
-.pipe{display:grid;gap:8px}
-.step{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;background:var(--surface2);border-radius:10px;padding:10px 12px;font-size:15px}
-.step .n{font:600 13px var(--mono);color:var(--accent)}
-.step .t{font:500 12px var(--mono);color:var(--muted)}
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:12px;box-shadow:0 14px 36px -24px #0f1b2d66}
+.demo-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.cap{font:500 12px/1.3 var(--mono);color:var(--dim)}
+.try{font:600 12px var(--mono);color:var(--accent);background:var(--accent-soft);padding:5px 8px;border-radius:6px}
+.note{color:var(--dim);font-size:14px;margin:0}
+.approve{border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:8px}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;font-size:15px}
+.t{font:500 12.5px var(--mono);color:var(--muted)}
 .ok{color:var(--good);font-weight:700}
 .hold{color:var(--warn);font-weight:700}
-/* chat */
+.acts{display:flex;flex-wrap:wrap;gap:8px}
+.diff{font:500 12.5px/1.6 var(--mono);background:var(--surface2);border-radius:10px;padding:10px 12px;margin:0;overflow-x:auto}
+.diff .m{color:var(--bad)} .diff .p{color:var(--good)}
+.status{font-size:15px;border-radius:10px;padding:10px 12px;margin:0;display:grid;gap:8px;justify-items:start}
+.status.done{background:var(--good-soft)}
+.status.no{background:var(--surface2)}
+.chat{display:grid;gap:10px;max-height:340px;overflow:auto;padding-right:2px}
 .msg{border-radius:12px;padding:10px 12px;font-size:15px;max-width:92%}
-.msg.q{background:var(--accent);color:#fff;justify-self:end}
+.msg.q{background:var(--accent);color:var(--accent-ink);justify-self:end}
 .msg.a{background:var(--surface2)}
 .msg.a small{display:block;margin-top:6px;font:500 12px var(--mono);color:var(--dim)}
-/* approval */
-.approve{border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:8px}
-.approve .row{display:flex;justify-content:space-between;gap:10px;font-size:15px}
-.approve .acts{display:flex;gap:8px}
-.approve .acts span{font:700 13px var(--display);padding:8px 12px;border-radius:8px;background:var(--surface2)}
-.approve .acts .yes{background:var(--good);color:#fff}
-/* health */
-.health{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.health div{background:var(--surface2);border-radius:10px;padding:10px;font-size:13.5px;display:grid;gap:2px}
-.health b{font:600 13px var(--mono)}
-/* chart */
-.bars{display:grid;gap:8px}
-.bar{display:grid;grid-template-columns:110px 1fr 56px;gap:10px;align-items:center;font-size:14px}
-.bar .track{height:12px;background:var(--surface2);border-radius:6px;overflow:hidden}
-.bar .fill{height:100%;background:var(--accent);border-radius:6px}
-.bar .v{font:600 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
-.note{color:var(--dim);font-size:14px;margin:0}
-footer{display:grid;gap:14px;border-top:1px solid var(--line);padding-top:28px}
-footer h2{font-size:28px}
-@media (max-width:760px){.case{grid-template-columns:1fr}.case:nth-of-type(even) .demo{order:0}.health{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:86px 1fr 48px}}
-@media print{body{background:#fff}.wrap{padding-block:0;gap:28px}.case{break-inside:avoid;grid-template-columns:1fr 1fr}.demo{box-shadow:none}.links .btn:not(.primary){display:none}}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font:600 13.5px/1.3 var(--body);padding:8px 11px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[disabled]{opacity:.4;cursor:default}
+.pipe{display:grid;gap:8px}
+.step{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;background:var(--surface2);border-radius:10px;padding:10px 12px;font-size:15px;transition:opacity .2s}
+.step .n{font:600 13px var(--mono);color:var(--accent)}
+.step.wait{opacity:.45}
+.step.run .t::before{content:"● ";color:var(--accent)}
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:96px 1fr 50px;gap:10px;align-items:center;font-size:14.5px}
+.track{height:12px;background:var(--surface2);border-radius:6px;overflow:hidden}
+.fill{display:block;height:100%;background:var(--accent);border-radius:6px;transition:width .7s ease}
+.v{font:600 13.5px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.short{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.short li{display:flex;justify-content:space-between;gap:10px;font-size:14px;background:var(--surface2);border-radius:8px;padding:7px 10px}
+.short li b{font:600 12.5px var(--mono);color:var(--good)}
+footer{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:24px}
+footer h2{font-size:26px}
+@media (max-width:780px){.case{grid-template-columns:minmax(0,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:80px 1fr 44px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -107,12 +129,12 @@ footer h2{font-size:28px}
   <header class="hero">
     <div class="eyebrow">Data &amp; Automation Specialist · Sydney</div>
     <h1>I turn manual operations into <span>automated, AI-assisted systems</span>.</h1>
-    <p>Hi, I'm Bautista. At a US food manufacturer with two plants, I replaced a reporting process built on spreadsheets and manual checks with scheduled Python jobs, data-quality controls, AI agents and dashboards the team opens in one tap. Below are four of those systems, rebuilt with fictitious data so you can see how they work.</p>
+    <p>Hi, I'm Bautista. At a US food manufacturer with two plants, I built the Python jobs, data-quality controls, AI agents and dashboards that now run the company's reporting. Pick a case below and try the demo. Every demo uses fictitious data.</p>
     <div class="metrics">
-      <div class="metric"><b>50+</b><small>people company-wide use my ERP AI assistant, 24/7</small></div>
-      <div class="metric"><b>25</b><small>Claude agents on a human-in-the-loop model</small></div>
-      <div class="metric"><b>100%</b><small>of operations reporting automated</small></div>
-      <div class="metric"><b>20+ h</b><small>of manual work freed every week</small></div>
+      <button class="metric" type="button" data-go="netsuite"><b>50+</b><small>people company-wide use my ERP AI assistant, 24/7</small><em>See case →</em></button>
+      <button class="metric" type="button" data-go="agents"><b>25</b><small>Claude agents on a human-in-the-loop model</small><em>See case →</em></button>
+      <button class="metric" type="button" data-go="reporting"><b>100%</b><small>of operations reporting automated</small><em>See case →</em></button>
+      <button class="metric" type="button" data-go="reporting"><b>20+ h</b><small>of manual work freed every week</small><em>See case →</em></button>
     </div>
     <div class="links">
       <a class="btn primary" href="mailto:bautinasta@gmail.com">bautinasta@gmail.com</a>
@@ -120,10 +142,19 @@ footer h2{font-size:28px}
     </div>
   </header>
 
-  <section class="case" aria-labelledby="c3">
+  <nav class="tabs" aria-label="Case studies">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>01</span>AI agents</button>
+      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>02</span>NetSuite Expert</button>
+      <button class="tab" role="tab" id="t-reporting" aria-controls="reporting" data-tab="reporting"><span>03</span>Automated reporting</button>
+      <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>04</span>Side project</button>
+    </div>
+  </nav>
+
+  <section class="case" role="tabpanel" id="agents" aria-labelledby="t-agents">
     <div class="txt">
-      <div class="eyebrow">Case 1 · AI agents, safely</div>
-      <h2 id="c3">25 agents where the AI proposes and a person approves</h2>
+      <div class="eyebrow">AI agents, safely</div>
+      <h2>25 agents where the AI proposes and a person approves</h2>
       <dl>
         <div><dt>Problem</dt><dd>Documented operating procedures are repetitive, but a mistake in production data is costly.</dd></div>
         <div><dt>What I built</dt><dd>25 Claude agents that carry out documented procedures on a human-in-the-loop model. Nothing is written to production without sign-off, and every change is validated in a sandbox and a replay harness against past production days first.</dd></div>
@@ -131,22 +162,31 @@ footer h2{font-size:28px}
       <p class="result"><b>Human sign-off</b> on every write. I also retired an AI pipeline once its quality metrics declined.</p>
       <div class="stack"><span>Claude</span><span>Claude Code</span><span>sandbox</span><span>replay tests</span></div>
     </div>
-    <div class="demo" aria-label="Example approval request with fictitious data">
-      <div class="cap">Example approval request · fictitious data</div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Approval request · fictitious data</span><span class="try">Try it</span></div>
       <div class="approve">
         <div class="row"><b>Daily scan reconciliation · 12 corrections</b><span class="t">Agent: Reconciliation</span></div>
         <div class="row"><span>Replay on last 30 days</span><span class="ok">0 differences</span></div>
         <div class="row"><span>Records changed</span><span>12 · no deletes</span></div>
-        <div class="acts"><span class="yes">Approve</span><span>Review changes</span><span>Reject</span></div>
+        <pre class="diff" id="ag-diff" hidden><span class="m">- Lot 4471  qty 118</span>  <span class="p">+ 120</span>  2 scans missed
+<span class="m">- Lot 4502  qty 96</span>   <span class="p">+ 95</span>   duplicate scan
+<span class="m">- Lot 4519  qty 210</span>  <span class="p">+ 212</span>  2 scans missed
+  … 9 more</pre>
+        <div class="acts" id="ag-acts">
+          <button class="btn small good" type="button" data-ag="approve">Approve</button>
+          <button class="btn small" type="button" data-ag="review">Review changes</button>
+          <button class="btn small bad" type="button" data-ag="reject">Reject</button>
+        </div>
+        <div class="status" id="ag-status" role="status" hidden></div>
       </div>
       <p class="note">The agent prepares the change and the evidence. A person decides.</p>
     </div>
   </section>
 
-  <section class="case" aria-labelledby="c2">
+  <section class="case" role="tabpanel" id="netsuite" aria-labelledby="t-netsuite" hidden>
     <div class="txt">
-      <div class="eyebrow">Case 2 · Applied AI + ERP</div>
-      <h2 id="c2">NetSuite Expert: an AI assistant connected live to the ERP</h2>
+      <div class="eyebrow">Applied AI + ERP</div>
+      <h2>NetSuite Expert: an AI assistant connected live to the ERP</h2>
       <dl>
         <div><dt>Problem</dt><dd>The company needed one reliable place, available at any hour, for how every core ERP process works and how recurring issues get fixed.</dd></div>
         <div><dt>What I built</dt><dd>An AI assistant connected live to NetSuite through MCP. Its knowledge base is a single source of truth: runbooks for every core process and 40+ issues documented with their root cause and fix.</dd></div>
@@ -154,32 +194,37 @@ footer h2{font-size:28px}
       <p class="result">Used by the <b>whole company: 50+ people</b> ask it questions, <b>24/7</b>.</p>
       <div class="stack"><span>Claude</span><span>MCP</span><span>NetSuite</span><span>SuiteQL</span></div>
     </div>
-    <div class="demo" aria-label="Example conversation with fictitious data">
-      <div class="cap">Example conversation · fictitious data</div>
-      <div class="msg q">Why did yesterday's production for item 1042 not post?</div>
-      <div class="msg a">The work order is still open because one component was short by 12 units. This matches known issue #17: backflush fails when stock is negative. Fix: receive the pending transfer, then close the work order.<small>Sources: runbook "Work order close" · issue #17 · live query</small></div>
-      <div class="msg q">Show me any other open work orders with the same problem.</div>
-      <div class="msg a">2 more: WO-2231 and WO-2240. Both are waiting on the same transfer.<small>Live query · read-only</small></div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Conversation · fictitious data</span><span class="try">Ask a question</span></div>
+      <div class="chat" id="ns-chat" aria-live="polite">
+        <div class="msg q">Why didn't yesterday's production for item 1042 post?</div>
+        <div class="msg a">The work order is still open because one component was short by 12 units. This matches known issue #17: backflush fails when stock is negative. Fix: receive the pending transfer, then close the work order.<small>Sources: runbook "Work order close" · issue #17 · live query</small></div>
+      </div>
+      <div class="chips" id="ns-chips">
+        <button class="chip" type="button" data-q="0">Any other open work orders like that?</button>
+        <button class="chip" type="button" data-q="1">How do I reverse a wrong inventory adjustment?</button>
+        <button class="chip" type="button" data-q="2">Can you just fix it for me?</button>
+      </div>
     </div>
   </section>
 
-  <section class="case" aria-labelledby="c1">
+  <section class="case" role="tabpanel" id="reporting" aria-labelledby="t-reporting" hidden>
     <div class="txt">
-      <div class="eyebrow">Case 3 · Process automation</div>
-      <h2 id="c1">Production reporting that runs itself before the morning shift</h2>
+      <div class="eyebrow">Process automation</div>
+      <h2>Production reporting that runs itself before the morning shift</h2>
       <dl>
         <div><dt>Problem</dt><dd>Daily and monthly management reports were assembled by hand from raw plant data, spreadsheets and manual checks.</dd></div>
-        <div><dt>What I built</dt><dd>An automated cycle from raw plant data to management reports, with controls that fix routine entry errors and halt when a record is ambiguous, so wrong figures never reach management.</dd></div>
+        <div><dt>What I built</dt><dd>An automated cycle from raw plant data to management reports, with controls that fix routine entry errors and halt when a record is ambiguous, so wrong figures never reach management. 25+ scheduled jobs, monitored, with a 9-point health check every morning.</dd></div>
       </dl>
       <p class="result"><b>100% automated</b>, freeing <b>20+ hours</b> of manual work every week. Reports arrive before the morning shift.</p>
       <div class="stack"><span>Python</span><span>pandas</span><span>SQL</span><span>scheduled jobs</span><span>Power BI</span></div>
     </div>
-    <div class="demo" aria-label="Example pipeline run with fictitious data">
-      <div class="cap">Example run · 05:40 · fictitious data</div>
-      <div class="pipe">
+    <div class="demo">
+      <div class="demo-head"><span class="cap" id="rp-cap">Last run · 05:40 · fictitious data</span><button class="btn small primary" type="button" id="rp-run">▶ Run again</button></div>
+      <div class="pipe" id="rp-pipe">
         <div class="step"><span class="n">01</span>Pull plant data (2 plants)<span class="t ok">✓ 05:40</span></div>
         <div class="step"><span class="n">02</span>Fix routine entry errors<span class="t ok">✓ 3 fixed</span></div>
-        <div class="step"><span class="n">03</span>Ambiguous record: lot 4471<span class="t hold">⏸ held</span></div>
+        <div class="step"><span class="n">03</span>Ambiguous record: lot 4471<span class="t hold">⏸ held for review</span></div>
         <div class="step"><span class="n">04</span>Build daily report<span class="t ok">✓ 05:52</span></div>
         <div class="step"><span class="n">05</span>Deliver to management<span class="t ok">✓ 06:00</span></div>
       </div>
@@ -187,10 +232,10 @@ footer h2{font-size:28px}
     </div>
   </section>
 
-  <section class="case" aria-labelledby="c4">
+  <section class="case" role="tabpanel" id="project" aria-labelledby="t-project" hidden>
     <div class="txt">
-      <div class="eyebrow">Case 4 · Personal AI automation project</div>
-      <h2 id="c4">An AI agent that triages 180+ new listings a week down to five</h2>
+      <div class="eyebrow">Personal AI automation project</div>
+      <h2>An AI agent that triages 180+ new listings a week down to five</h2>
       <dl>
         <div><dt>Problem</dt><dd>Reviewing a large weekly inflow of public listings by hand is slow, and most items don't meet the criteria that matter.</dd></div>
         <div><dt>What I built</dt><dd>A scheduled AI routine that collects new listings, applies explicit rules, scores what's left and sends a short list to a mobile page where I approve or discard with one tap. Approved items get a first draft of the follow-up document, and a person always makes the final call.</dd></div>
@@ -198,13 +243,18 @@ footer h2{font-size:28px}
       <p class="result">From <b>180+ items</b> to <b>a shortlist of 5</b>, twice a week, with zero manual sorting.</p>
       <div class="stack"><span>Claude Code</span><span>Python</span><span>scheduled routines</span><span>Gmail API</span></div>
     </div>
-    <div class="demo" aria-label="Example weekly funnel">
-      <div class="cap">Example week</div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Example week</span><button class="btn small primary" type="button" id="fn-run">▶ Run triage</button></div>
       <div class="bars">
-        <div class="bar"><span>Collected</span><span class="track"><span class="fill" style="width:100%;display:block"></span></span><span class="v">180</span></div>
-        <div class="bar"><span>Pass rules</span><span class="track"><span class="fill" style="width:32%;display:block"></span></span><span class="v">57</span></div>
-        <div class="bar"><span>Shortlist</span><span class="track"><span class="fill" style="width:3%;display:block;background:var(--good)"></span></span><span class="v">5</span></div>
+        <div class="bar"><span>Collected</span><span class="track"><span class="fill" data-w="100"></span></span><span class="v" data-n="180">180</span></div>
+        <div class="bar"><span>Pass rules</span><span class="track"><span class="fill" data-w="32"></span></span><span class="v" data-n="57">57</span></div>
+        <div class="bar"><span>Shortlist</span><span class="track"><span class="fill" data-w="3" style="background:var(--good)"></span></span><span class="v" data-n="5">5</span></div>
       </div>
+      <ul class="short">
+        <li>Item A · matches 4 of 4 rules<b>score 70</b></li>
+        <li>Item B · matches 4 of 4 rules<b>score 70</b></li>
+        <li>Item C · matches 3 of 4 rules<b>score 60</b></li>
+      </ul>
       <p class="note">Same pattern as my work systems: rules first, AI where judgement helps, and a person approves.</p>
     </div>
   </section>
@@ -218,6 +268,117 @@ footer h2{font-size:28px}
     </div>
   </footer>
 </div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+  const TABS = ["agents", "netsuite", "reporting", "project"];
+
+  function show(id, focus) {
+    if (!TABS.includes(id)) id = "agents";
+    TABS.forEach(t => {
+      $(t).hidden = t !== id;
+      const b = $("t-" + t);
+      b.setAttribute("aria-selected", t === id);
+      b.tabIndex = t === id ? 0 : -1;
+    });
+    if (focus) $("t-" + id).focus();
+  }
+  document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
+    show(b.dataset.tab);
+    try { history.replaceState(null, "", "#" + b.dataset.tab); } catch (e) {}
+  }));
+  document.querySelector(".tablist").addEventListener("keydown", e => {
+    const i = TABS.indexOf(document.activeElement.dataset.tab);
+    if (i < 0) return;
+    if (e.key === "ArrowRight") show(TABS[(i + 1) % 4], true);
+    if (e.key === "ArrowLeft") show(TABS[(i + 3) % 4], true);
+  });
+  document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
+    show(b.dataset.go);
+    document.querySelector(".tabs").scrollIntoView({behavior: reduce ? "auto" : "smooth", block: "start"});
+  }));
+  show((location.hash || "").slice(1));
+  window.addEventListener("hashchange", () => show(location.hash.slice(1)));
+
+  $("ag-acts").addEventListener("click", e => {
+    const b = e.target.closest("[data-ag]"); if (!b) return;
+    const st = $("ag-status");
+    if (b.dataset.ag === "review") {
+      $("ag-diff").hidden = !$("ag-diff").hidden;
+      b.textContent = $("ag-diff").hidden ? "Review changes" : "Hide changes";
+      return;
+    }
+    $("ag-acts").hidden = true; st.hidden = false;
+    st.className = "status " + (b.dataset.ag === "approve" ? "done" : "no");
+    st.innerHTML = b.dataset.ag === "approve"
+      ? "<span>✓ <b>Written to production.</b> 12 records updated · audit log #A-2231 saved · undo available.</span>"
+      : "<span><b>Nothing written.</b> The agent logs the rejection and the records stay as they were.</span>";
+    const r = document.createElement("button");
+    r.className = "btn small"; r.type = "button"; r.textContent = "Reset demo";
+    r.onclick = () => { st.hidden = true; $("ag-acts").hidden = false; };
+    st.appendChild(r);
+  });
+
+  const QA = [
+    ["Any other open work orders like that?", "2 more: WO-2231 and WO-2240. Both are waiting on the same transfer, so receiving it fixes all three.", "Live query · read-only"],
+    ["How do I reverse a wrong inventory adjustment?", "Don't delete it. Create an opposite adjustment on the same date and location, reference the original in the memo, and ask Finance to approve it if the value is over the threshold.", "Sources: runbook \"Inventory adjustments\" · issue #23"],
+    ["Can you just fix it for me?", "I can prepare the transfer receipt for you to review, but I don't write to NetSuite myself. A person with the right role approves every change.", "Policy: human sign-off on every write"]
+  ];
+  $("ns-chips").addEventListener("click", async e => {
+    const c = e.target.closest("[data-q]"); if (!c || c.disabled) return;
+    c.disabled = true;
+    const [q, a, src] = QA[+c.dataset.q], chat = $("ns-chat");
+    const qe = document.createElement("div"); qe.className = "msg q"; qe.textContent = q; chat.appendChild(qe);
+    const el = document.createElement("div"); el.className = "msg a"; el.textContent = "…"; chat.appendChild(el);
+    chat.scrollTop = chat.scrollHeight;
+    await wait(450);
+    if (reduce) el.textContent = a;
+    else {
+      el.textContent = "";
+      for (const w of a.split(" ")) { el.textContent += (el.textContent ? " " : "") + w; chat.scrollTop = chat.scrollHeight; await wait(28); }
+    }
+    const s = document.createElement("small"); s.textContent = src; el.appendChild(s);
+    chat.scrollTop = chat.scrollHeight;
+  });
+
+  const STEPS = [["✓ 05:40", "ok"], ["✓ 3 fixed", "ok"], ["⏸ held for review", "hold"], ["✓ 05:52", "ok"], ["✓ 06:00", "ok"]];
+  let running = false;
+  $("rp-run").addEventListener("click", async () => {
+    if (running) return; running = true; $("rp-run").disabled = true;
+    const steps = [...$("rp-pipe").children];
+    $("rp-cap").textContent = "Running now · fictitious data";
+    steps.forEach(s => { s.className = "step wait"; const t = s.querySelector(".t"); t.className = "t"; t.textContent = "waiting"; });
+    for (let i = 0; i < steps.length; i++) {
+      const s = steps[i], t = s.querySelector(".t");
+      s.className = "step run"; t.textContent = "running";
+      await wait(650);
+      s.className = "step"; t.textContent = STEPS[i][0]; t.className = "t " + STEPS[i][1];
+    }
+    $("rp-cap").textContent = "Delivered on time · 1 record held for a person";
+    running = false; $("rp-run").disabled = false;
+  });
+
+  const fills = [...document.querySelectorAll(".fill")], nums = [...document.querySelectorAll(".v[data-n]")];
+  fills.forEach(f => f.style.width = f.dataset.w + "%");
+  $("fn-run").addEventListener("click", async () => {
+    $("fn-run").disabled = true;
+    fills.forEach(f => f.style.width = "0%"); nums.forEach(n => n.textContent = "0");
+    await wait(250);
+    for (let i = 0; i < fills.length; i++) {
+      fills[i].style.width = fills[i].dataset.w + "%";
+      const end = +nums[i].dataset.n, t0 = performance.now(), dur = reduce ? 0 : 650;
+      await new Promise(res => {
+        const tick = now => { const k = dur ? Math.min(1, (now - t0) / dur) : 1; nums[i].textContent = Math.round(end * k); k < 1 ? requestAnimationFrame(tick) : res(); };
+        requestAnimationFrame(tick);
+      });
+    }
+    $("fn-run").disabled = false;
+  });
+})();
+</script>
 
 </body>
 </html>
