@@ -8,6 +8,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bautinasta.github.io/">
 <meta name="twitter:card" content="summary">
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","yp4zg58okj");
+</script>
 <title>Bautista Nasta · Data & Automation Specialist</title>
 <meta name="description" content="Data & Automation Specialist in Sydney. Interactive case studies in AI agents, ERP automation and process automation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -313,6 +318,14 @@ footer h2{font-size:26px}
   const $ = id => document.getElementById(id);
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+  // Medición (Microsoft Clarity, solo en el sitio publicado; acá no hace nada si no está cargado)
+  const track = (...a) => { try { if (window.clarity) window.clarity(...a); } catch (e) {} };
+  const params = new URLSearchParams(location.search);
+  const ref = (params.get("r") || "").replace(/[^a-z0-9_-]/gi, "").slice(0, 40);
+  if (params.has("me")) { try { localStorage.setItem("me", "1"); } catch (e) {} }
+  let me = false; try { me = localStorage.getItem("me") === "1"; } catch (e) {}
+  if (ref) { track("set", "ref", ref); track("event", "ref_" + ref); }
+  if (me) track("set", "owner", "bauti");
   const TABS = ["agents", "netsuite", "reporting", "venture", "project"];
 
   function show(id, focus) {
@@ -324,6 +337,7 @@ footer h2{font-size:26px}
       b.tabIndex = t === id ? 0 : -1;
     });
     if (focus) $("t-" + id).focus();
+    track("set", "tab", id); track("event", "tab_" + id);
   }
   document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
     show(b.dataset.tab);
@@ -344,6 +358,7 @@ footer h2{font-size:26px}
 
   $("ag-acts").addEventListener("click", e => {
     const b = e.target.closest("[data-ag]"); if (!b) return;
+    track("event", "demo_agents_" + b.dataset.ag);
     const st = $("ag-status");
     if (b.dataset.ag === "review") {
       $("ag-diff").hidden = !$("ag-diff").hidden;
@@ -369,6 +384,7 @@ footer h2{font-size:26px}
   $("ns-chips").addEventListener("click", async e => {
     const c = e.target.closest("[data-q]"); if (!c || c.disabled) return;
     c.disabled = true;
+    track("event", "demo_netsuite_q" + c.dataset.q);
     const [q, a, src] = QA[+c.dataset.q], chat = $("ns-chat");
     const qe = document.createElement("div"); qe.className = "msg q"; qe.textContent = q; chat.appendChild(qe);
     const el = document.createElement("div"); el.className = "msg a"; el.textContent = "…"; chat.appendChild(el);
@@ -386,7 +402,7 @@ footer h2{font-size:26px}
   const STEPS = [["✓ 05:40", "ok"], ["✓ 3 fixed", "ok"], ["⏸ held for review", "hold"], ["✓ 05:52", "ok"], ["✓ 06:00", "ok"]];
   let running = false;
   $("rp-run").addEventListener("click", async () => {
-    if (running) return; running = true; $("rp-run").disabled = true;
+    if (running) return; running = true; track("event", "demo_reporting_run"); $("rp-run").disabled = true;
     const steps = [...$("rp-pipe").children];
     $("rp-cap").textContent = "Running now · fictitious data";
     steps.forEach(s => { s.className = "step wait"; const t = s.querySelector(".t"); t.className = "t"; t.textContent = "waiting"; });
@@ -402,7 +418,7 @@ footer h2{font-size:26px}
 
   let vtDone = false;
   $("vt-run").addEventListener("click", async () => {
-    if (vtDone) return; vtDone = true; $("vt-run").disabled = true;
+    if (vtDone) return; vtDone = true; track("event", "demo_venture_visit"); $("vt-run").disabled = true;
     const row = $("vt-list").children[3], cells = row.children;
     row.classList.add("flash");
     cells[1].className = "ok"; cells[1].textContent = "✓";
@@ -419,7 +435,7 @@ footer h2{font-size:26px}
   const fills = [...document.querySelectorAll(".fill")], nums = [...document.querySelectorAll(".v[data-n]")];
   fills.forEach(f => f.style.width = f.dataset.w + "%");
   $("fn-run").addEventListener("click", async () => {
-    $("fn-run").disabled = true;
+    $("fn-run").disabled = true; track("event", "demo_project_run");
     fills.forEach(f => f.style.width = "0%"); nums.forEach(n => n.textContent = "0");
     await wait(250);
     for (let i = 0; i < fills.length; i++) {
