@@ -85,6 +85,11 @@ h1,h2{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01e
 .video .lbl{position:absolute;left:14px;bottom:12px;z-index:1;font:700 14px/1.2 var(--display);color:#fff}
 .video button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .video iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:14px}
+.opslink{display:grid;gap:4px;margin-top:14px;padding:16px 18px;border-radius:14px;border:1px solid var(--accent);background:var(--accent-soft);color:var(--ink);text-decoration:none;transition:transform .15s}
+.opslink:hover{transform:translateY(-2px)}
+.opslink .ol-k{font:600 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.opslink b{font:700 17px/1.3 var(--display);color:var(--ink)}
+.opslink .ol-d{font-size:14px;line-height:1.5;color:var(--muted)}
 .try{font:600 12px var(--mono);color:var(--accent);background:var(--accent-soft);padding:5px 8px;border-radius:6px}
 .note{color:var(--dim);font-size:14px;margin:0}
 .approve{border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:8px}
@@ -236,6 +241,11 @@ footer h2{font-size:26px}
       <p class="result"><b>100% automated</b>, freeing <b>20+ hours</b> of manual work every week. Reports arrive before the morning shift.</p>
       <div class="stack"><span>Python</span><span>pandas</span><span>SQL</span><span>scheduled jobs</span><span>Power BI</span></div>
       <div class="video" data-yt="0JxX6S8M3Lg" data-case="reporting"></div>
+      <a class="opslink" href="ops/?r=portfolio" target="_blank" rel="noopener" data-track="ops_open">
+        <span class="ol-k">Live demo</span>
+        <b>Open the full dashboard hub ↗</b>
+        <span class="ol-d">Four dashboards that rebuild and publish themselves every night (daily report, weekly review, lot records, system health) plus the ERP migration tracker. Fictitious data, same design as the real one.</span>
+      </a>
     </div>
     <div class="demo">
       <div class="demo-head"><span class="cap" id="rp-cap">Last run · 05:40 · fictitious data</span><button class="btn small primary" type="button" id="rp-run">▶ Run again</button></div>
@@ -361,6 +371,9 @@ footer h2{font-size:26px}
   show((location.hash || "").slice(1));
   window.addEventListener("hashchange", () => show(location.hash.slice(1)));
 
+  // La demo del Dashboard Hub hereda el origen de la visita (si vino de una carta, sigue contando para esa empresa)
+  document.querySelectorAll(".opslink").forEach(a => { a.href = "ops/?r=" + (ref || "portfolio"); });
+  document.querySelectorAll("[data-track]").forEach(a => a.addEventListener("click", () => track("event", a.dataset.track)));
   // Videos: se carga YouTube recién cuando tocan play
   document.querySelectorAll(".video[data-yt]").forEach(v => {
     const id = v.dataset.yt, b = document.createElement("button");
