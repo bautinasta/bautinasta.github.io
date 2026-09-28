@@ -149,10 +149,10 @@ footer h2{font-size:26px}
     <h1>I turn manual operations into <span>automated, AI-assisted systems</span>.</h1>
     <p>Hi, I'm Bautista. I design, direct and verify automation systems, and build them with Claude Code as my engineering partner. At a US food manufacturer with two plants, that meant fully automated reporting, an ERP AI assistant and 25 human-in-the-loop agents. I also co-founded a small AI consultancy for SMEs. Pick a case below and try the demo. Every demo uses fictitious data.</p>
     <div class="metrics">
-      <button class="metric" type="button" data-go="netsuite"><b>50+</b><small>people company-wide use my ERP AI assistant, 24/7</small><em>See case →</em></button>
-      <button class="metric" type="button" data-go="agents"><b>25</b><small>Claude agents on a human-in-the-loop model</small><em>See case →</em></button>
       <button class="metric" type="button" data-go="reporting"><b>100%</b><small>of operations reporting automated</small><em>See case →</em></button>
       <button class="metric" type="button" data-go="reporting"><b>20+ h</b><small>of manual work freed every week</small><em>See case →</em></button>
+      <button class="metric" type="button" data-go="agents"><b>25</b><small>Claude agents on a human-in-the-loop model</small><em>See case →</em></button>
+      <button class="metric" type="button" data-go="netsuite"><b>50+</b><small>people company-wide use my ERP AI assistant, 24/7</small><em>See case →</em></button>
     </div>
     <div class="links">
       <a class="btn primary" href="mailto:bautinasta@gmail.com">bautinasta@gmail.com</a>
@@ -163,15 +163,45 @@ footer h2{font-size:26px}
 
   <nav class="tabs" aria-label="Case studies">
     <div class="tablist" role="tablist">
-      <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>01</span>AI agents</button>
-      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>02</span>NetSuite Expert</button>
-      <button class="tab" role="tab" id="t-reporting" aria-controls="reporting" data-tab="reporting"><span>03</span>Automated reporting</button>
+      <button class="tab" role="tab" id="t-reporting" aria-controls="reporting" data-tab="reporting"><span>01</span>Automated reporting</button>
+      <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>02</span>AI agents</button>
+      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>03</span>NetSuite Expert</button>
       <button class="tab" role="tab" id="t-venture" aria-controls="venture" data-tab="venture"><span>04</span>AI consultancy</button>
       <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>05</span>Side project</button>
     </div>
   </nav>
 
-  <section class="case" role="tabpanel" id="agents" aria-labelledby="t-agents">
+  <section class="case" role="tabpanel" id="reporting" aria-labelledby="t-reporting">
+    <div class="txt">
+      <div class="eyebrow">Process automation</div>
+      <h2>Production reporting that runs itself before the morning shift</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>Daily and monthly management reports were assembled by hand from raw plant data, spreadsheets and manual checks.</dd></div>
+        <div><dt>What I built</dt><dd>An automated cycle from raw plant data to management reports, with controls that fix routine entry errors and halt when a record is ambiguous, so wrong figures never reach management. 25+ scheduled jobs, monitored, with a 9-point health check every morning.</dd></div>
+      </dl>
+      <p class="result"><b>100% automated</b>, freeing <b>20+ hours</b> of manual work every week. Reports arrive before the morning shift.</p>
+      <div class="stack"><span>Python</span><span>pandas</span><span>SQL</span><span>scheduled jobs</span><span>Power BI</span></div>
+      <a class="opslink" href="ops/?r=portfolio" target="_blank" rel="noopener" data-track="ops_open">
+        <span class="ol-k">Live demo</span>
+        <b>Open the full dashboard hub ↗</b>
+        <span class="ol-d">Four dashboards that rebuild and publish themselves every night (daily report, weekly review, lot records, system health) plus the ERP migration tracker. Fictitious data, same design as the real one.</span>
+      </a>
+      <div class="video" data-yt="0JxX6S8M3Lg" data-case="reporting"></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap" id="rp-cap">Last run · 05:40 · fictitious data</span><button class="btn small primary" type="button" id="rp-run">▶ Run again</button></div>
+      <div class="pipe" id="rp-pipe">
+        <div class="step"><span class="n">01</span>Pull plant data (2 plants)<span class="t ok">✓ 05:40</span></div>
+        <div class="step"><span class="n">02</span>Fix routine entry errors<span class="t ok">✓ 3 fixed</span></div>
+        <div class="step"><span class="n">03</span>Ambiguous record: lot 4471<span class="t hold">⏸ held for review</span></div>
+        <div class="step"><span class="n">04</span>Build daily report<span class="t ok">✓ 05:52</span></div>
+        <div class="step"><span class="n">05</span>Deliver to management<span class="t ok">✓ 06:00</span></div>
+      </div>
+      <p class="note">A held record stops only its own line and is flagged for a person, so the rest of the report still goes out on time.</p>
+    </div>
+  </section>
+
+  <section class="case" role="tabpanel" id="agents" aria-labelledby="t-agents" hidden>
     <div class="txt">
       <div class="eyebrow">AI agents, safely</div>
       <h2>25 agents where the AI proposes and a person approves</h2>
@@ -227,36 +257,6 @@ footer h2{font-size:26px}
         <button class="chip" type="button" data-q="1">How do I reverse a wrong inventory adjustment?</button>
         <button class="chip" type="button" data-q="2">Can you just fix it for me?</button>
       </div>
-    </div>
-  </section>
-
-  <section class="case" role="tabpanel" id="reporting" aria-labelledby="t-reporting" hidden>
-    <div class="txt">
-      <div class="eyebrow">Process automation</div>
-      <h2>Production reporting that runs itself before the morning shift</h2>
-      <dl>
-        <div><dt>Problem</dt><dd>Daily and monthly management reports were assembled by hand from raw plant data, spreadsheets and manual checks.</dd></div>
-        <div><dt>What I built</dt><dd>An automated cycle from raw plant data to management reports, with controls that fix routine entry errors and halt when a record is ambiguous, so wrong figures never reach management. 25+ scheduled jobs, monitored, with a 9-point health check every morning.</dd></div>
-      </dl>
-      <p class="result"><b>100% automated</b>, freeing <b>20+ hours</b> of manual work every week. Reports arrive before the morning shift.</p>
-      <div class="stack"><span>Python</span><span>pandas</span><span>SQL</span><span>scheduled jobs</span><span>Power BI</span></div>
-      <div class="video" data-yt="0JxX6S8M3Lg" data-case="reporting"></div>
-      <a class="opslink" href="ops/?r=portfolio" target="_blank" rel="noopener" data-track="ops_open">
-        <span class="ol-k">Live demo</span>
-        <b>Open the full dashboard hub ↗</b>
-        <span class="ol-d">Four dashboards that rebuild and publish themselves every night (daily report, weekly review, lot records, system health) plus the ERP migration tracker. Fictitious data, same design as the real one.</span>
-      </a>
-    </div>
-    <div class="demo">
-      <div class="demo-head"><span class="cap" id="rp-cap">Last run · 05:40 · fictitious data</span><button class="btn small primary" type="button" id="rp-run">▶ Run again</button></div>
-      <div class="pipe" id="rp-pipe">
-        <div class="step"><span class="n">01</span>Pull plant data (2 plants)<span class="t ok">✓ 05:40</span></div>
-        <div class="step"><span class="n">02</span>Fix routine entry errors<span class="t ok">✓ 3 fixed</span></div>
-        <div class="step"><span class="n">03</span>Ambiguous record: lot 4471<span class="t hold">⏸ held for review</span></div>
-        <div class="step"><span class="n">04</span>Build daily report<span class="t ok">✓ 05:52</span></div>
-        <div class="step"><span class="n">05</span>Deliver to management<span class="t ok">✓ 06:00</span></div>
-      </div>
-      <p class="note">A held record stops only its own line and is flagged for a person, so the rest of the report still goes out on time.</p>
     </div>
   </section>
 
@@ -341,10 +341,10 @@ footer h2{font-size:26px}
   let me = false; try { me = localStorage.getItem("me") === "1"; } catch (e) {}
   if (ref) { track("set", "ref", ref); track("event", "ref_" + ref); }
   if (me) track("set", "owner", "bauti");
-  const TABS = ["agents", "netsuite", "reporting", "venture", "project"];
+  const TABS = ["reporting", "agents", "netsuite", "venture", "project"];
 
   function show(id, focus) {
-    if (!TABS.includes(id)) id = "agents";
+    if (!TABS.includes(id)) id = "reporting";
     TABS.forEach(t => {
       $(t).hidden = t !== id;
       const b = $("t-" + t);
