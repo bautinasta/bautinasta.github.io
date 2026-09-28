@@ -20,25 +20,15 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
 :root{
-  --bg:#f7f9fb; --surface:#ffffff; --surface2:#eef2f6; --line:#dde3ea;
-  --ink:#0f1b2d; --muted:#556275; --dim:#8a95a5;
-  --accent:#1f5eff; --accent-ink:#ffffff; --accent-soft:#e6edff; --good:#0e9f6e; --good-soft:#e3f6ee; --warn:#b7791f; --warn-soft:#fdf3e1; --bad:#d64545; --bad-soft:#fdecec;
+  color-scheme:dark;
+  --bg:#0b1220; --surface:#121b2d; --surface2:#1a2539; --line:#27344d;
+  --ink:#eaf0fa; --muted:#a3afc4; --dim:#6f7c93;
+  --accent:#6e9bff; --accent-ink:#0b1220; --accent-soft:#1a2b52; --good:#34d399; --good-soft:#123528; --warn:#f2b84b; --warn-soft:#3a2c12; --bad:#f87171; --bad-soft:#3a1717;
   --display:"Manrope",system-ui,sans-serif;
   --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  color-scheme:dark;
-  --bg:#0b1220; --surface:#121b2d; --surface2:#1a2539; --line:#27344d;
-  --ink:#eaf0fa; --muted:#a3afc4; --dim:#6f7c93;
-  --accent:#6e9bff; --accent-ink:#0b1220; --accent-soft:#1a2b52; --good:#34d399; --good-soft:#123528; --warn:#f2b84b; --warn-soft:#3a2c12; --bad:#f87171; --bad-soft:#3a1717;
-}}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#0b1220; --surface:#121b2d; --surface2:#1a2539; --line:#27344d;
-  --ink:#eaf0fa; --muted:#a3afc4; --dim:#6f7c93;
-  --accent:#6e9bff; --accent-ink:#0b1220; --accent-soft:#1a2b52; --good:#34d399; --good-soft:#123528; --warn:#f2b84b; --warn-soft:#3a2c12; --bad:#f87171; --bad-soft:#3a1717;
-}
+/* Siempre oscuro, en PC y en celular. */
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{overflow-x:hidden}
