@@ -136,7 +136,9 @@ footer{color:#6b7280;font-size:12px;border-top:1px solid #232838;padding-top:14p
 .swipe{display:none;color:#6b7280;font-size:11.5px;margin:-4px 0 8px}
 @media (max-width:700px){.swipe{display:block}}
 </style><script type="text/javascript">
+// Las visitas de Bauti no se miden: basta abrir el sitio una vez con ?me=1 en cada navegador.
 (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+try{if(/[?&]me=/.test(location.search))localStorage.setItem("me","1");if(localStorage.getItem("me"))return;}catch(e){}
 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","yq31j1doan");
 </script>

@@ -9,7 +9,9 @@
 <meta property="og:url" content="https://bautinasta.github.io/">
 <meta name="twitter:card" content="summary">
 <script type="text/javascript">
+// Las visitas de Bauti no se miden: basta abrir el sitio una vez con ?me=1 en cada navegador.
 (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+try{if(/[?&]me=/.test(location.search))localStorage.setItem("me","1");if(localStorage.getItem("me"))return;}catch(e){}
 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","yq31j1doan");
 </script>
