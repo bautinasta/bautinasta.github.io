@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta property="og:title" content="Bautista Nasta · Data & Automation Specialist">
-<meta property="og:description" content="Interactive case studies in AI agents, ERP automation, process automation and an AI consultancy, rebuilt with fictitious data.">
+<meta property="og:description" content="Interactive case studies in AI agents, ERP automation, process automation and an Consultancy workflow, rebuilt with fictitious data.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bautinasta.github.io/">
 <meta name="twitter:card" content="summary">
@@ -182,8 +182,8 @@ body{background:var(--bg);color:var(--ink)}
       <button class="tab" role="tab" id="t-reporting" aria-controls="reporting" data-tab="reporting"><span>01</span>Automated reporting</button>
       <button class="tab" role="tab" id="t-twin" aria-controls="twin" data-tab="twin"><span>02</span>3D digital twin</button>
       <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>03</span>AI agents</button>
-      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>04</span>NetSuite Expert</button>
-      <button class="tab" role="tab" id="t-venture" aria-controls="venture" data-tab="venture"><span>05</span>AI consultancy</button>
+      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>04</span>ERP assistant</button>
+      <button class="tab" role="tab" id="t-venture" aria-controls="venture" data-tab="venture"><span>05</span>Consultancy workflow</button>
       <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>06</span>Side project</button>
     </div>
   </nav>
@@ -193,8 +193,8 @@ body{background:var(--bg);color:var(--ink)}
       <div class="eyebrow">Process automation</div>
       <h2>Production reporting, arranged for a clearer review</h2>
       <dl>
-        <div><dt>Problem</dt><dd>Daily and monthly management reports were assembled by hand from raw plant data, spreadsheets and manual checks.</dd></div>
-        <div><dt>What I built</dt><dd>An automated cycle from raw plant data to management reports, with controls that fix routine entry errors and halt when a record is ambiguous, with ambiguous entries held for review. Scheduled reporting jobs are monitored with regular source and system checks.</dd></div>
+        <div><dt>Problem</dt><dd>Recurring reports brought together plant data, spreadsheets and manual checks.</dd></div>
+        <div><dt>What I built</dt><dd>A repeatable flow gathers source information, checks it and prepares a readable report. Ambiguous entries pause for review.</dd></div>
       </dl>
       <p class="result"><b>Built for a repeatable handoff.</b> The reporting flow brings source checks, review holds and scheduled delivery into one process.</p>
       <div class="stack"><span>Python</span><span>pandas</span><span>SQL</span><span>scheduled jobs</span><span>Power BI</span></div>
@@ -220,10 +220,10 @@ body{background:var(--bg);color:var(--ink)}
   <section class="case" role="tabpanel" id="twin" aria-labelledby="t-twin" hidden>
     <div class="txt">
       <div class="eyebrow">3D digital twin</div>
-      <h2>A 3D digital twin of a production plant that updates itself and can be verified</h2>
+      <h2>A plant you can explore.</h2>
       <dl>
-        <div><dt>Problem</dt><dd>Facility layout and process context were easier to review when presented together. Information lived across spreadsheets and system logs.</dd></div>
-        <div><dt>What I built</dt><dd>A self-contained 3D model organizes production areas and browsable history. Viewers can select a line and inspect the context behind the displayed information.</dd></div>
+        <div><dt>Problem</dt><dd>Facility layout and process context were difficult to explore together.</dd></div>
+        <div><dt>What I built</dt><dd>An interactive 3D model organizes production areas and makes process context easier to browse.</dd></div>
         <div><dt>How it stays trustworthy</dt><dd>Python extractors read the existing Excel files and logs in read-only mode, and every value keeps its source (file, sheet and cell). Calculated values are labelled ESTIMATED; missing data shows as "no data", never an invented number. The publishing workflow adds records only when sources are complete, tests the page, checks the published copy and can roll back if a check fails.</dd></div>
         <div><dt>What I learned</dt><dd><ul class="learn"><li>A visualization earns trust only if every number can be traced to its source.</li><li>Automation is worth it when it tests itself and rolls itself back.</li><li>Legibility can be designed and measured: less text on screen, detail one click away.</li></ul></dd></div>
       </dl>
@@ -244,10 +244,10 @@ body{background:var(--bg);color:var(--ink)}
   <section class="case" role="tabpanel" id="agents" aria-labelledby="t-agents" hidden>
     <div class="txt">
       <div class="eyebrow">AI agents, safely</div>
-      <h2>Agents that propose changes for a person to review</h2>
+      <h2>Automation with a person in control.</h2>
       <dl>
-        <div><dt>Problem</dt><dd>Documented operating procedures are repetitive, but a mistake in production data is costly.</dd></div>
-        <div><dt>What I built</dt><dd>Task-focused agents prepare suggested changes from documented procedures. The demo keeps review visible and uses a sandbox-style check before a person approves an example.</dd></div>
+        <div><dt>Problem</dt><dd>Routine data tasks need clear checks and a visible review step.</dd></div>
+        <div><dt>What I built</dt><dd>A task-focused assistant prepares sample changes, shows the supporting context and pauses for a person to review.</dd></div>
       </dl>
       <p class="result"><b>Review stays in the loop.</b> The interface makes the proposed change and its supporting evidence visible before an approval decision.</p>
       <div class="stack"><span>Claude</span><span>Claude Code</span><span>sandbox</span><span>replay tests</span></div>
@@ -275,10 +275,10 @@ body{background:var(--bg);color:var(--ink)}
   <section class="case" role="tabpanel" id="netsuite" aria-labelledby="t-netsuite" hidden>
     <div class="txt">
       <div class="eyebrow">Applied AI + ERP</div>
-      <h2>ERP process assistant</h2>
+      <h2>ERP guidance, close to its source.</h2>
       <dl>
-        <div><dt>Problem</dt><dd>ERP procedures and issue notes were spread across documents, making a reliable answer difficult to find.</dd></div>
-        <div><dt>What I built</dt><dd>An assistant interface connects documented ERP procedures with issue notes and reference queries. The project focuses on making answers easier to trace back to a source.</dd></div>
+        <div><dt>Problem</dt><dd>ERP procedures were spread across reference documents.</dd></div>
+        <div><dt>What I built</dt><dd>A question-and-answer interface returns a response with a reference to supporting guidance.</dd></div>
       </dl>
       <p class="result"><b>Grounded in documented process.</b> Responses include the reference used so the next step can be checked.</p>
       <div class="stack"><span>Claude</span><span>MCP</span><span>NetSuite</span><span>SuiteQL</span></div>
@@ -299,10 +299,10 @@ body{background:var(--bg);color:var(--ink)}
 
   <section class="case" role="tabpanel" id="venture" aria-labelledby="t-venture" hidden>
     <div class="txt">
-      <div class="eyebrow">Co-founder · AI consultancy for SMEs</div>
-      <h2>A connected client-acquisition and delivery workflow</h2>
+      <div class="eyebrow">Co-founder · Consultancy workflow for SMEs</div>
+      <h2>One connected workflow for client work.</h2>
       <dl>
-        <div><dt>Problem</dt><dd>The original workflow connected outreach, quoting, follow-up and project tracking.</dd></div>
+        <div><dt>Problem</dt><dd>Outreach, quoting, follow-up and project tracking sat across separate steps.</dd></div>
         <div><dt>What we built</dt><dd>The full channel: outbound email, an interactive quoting tool, a custom CRM with a conversion funnel. The demo uses fictional names and sample states.</dd></div>
       </dl>
       <p class="result">A connected workflow for outreach, quoting, follow-up and project tracking.</p>
@@ -328,10 +328,10 @@ body{background:var(--bg);color:var(--ink)}
   <section class="case" role="tabpanel" id="project" aria-labelledby="t-project" hidden>
     <div class="txt">
       <div class="eyebrow">Personal AI automation project</div>
-      <h2>A scheduled assistant for reviewing new listings</h2>
+      <h2>A clear review flow for incoming work.</h2>
       <dl>
         <div><dt>Problem</dt><dd>Reviewing a large weekly inflow of public listings by hand is slow, and most items don't meet the criteria that matter.</dd></div>
-        <div><dt>What I built</dt><dd>A scheduled AI routine that collects new listings, applies explicit rules, scores what's left and sends a short list to a mobile page where I approve or discard with one tap. Approved items get a first draft of the follow-up document, and a person always makes the final call.</dd></div>
+        <div><dt>What I built</dt><dd>A scheduled workflow gathers public listings, applies clear criteria and prepares a shortlist for review. Approved items can move to a draft follow-up.</dd></div>
       </dl>
       <p class="result">The workflow gathers new listings, applies explicit rules and presents a concise review list.</p>
       <div class="stack"><span>Claude Code</span><span>Python</span><span>scheduled routines</span><span>Gmail API</span></div>
