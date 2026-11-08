@@ -129,9 +129,25 @@ h1,h2{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01e
 .sbar{display:inline-block;width:38px;height:6px;background:var(--line);border-radius:4px;margin-right:6px;vertical-align:middle;overflow:hidden}
 .sbar i{display:block;height:100%;background:var(--accent);transition:width .8s ease}
 .trow.flash{outline:2px solid var(--good)}
+.gal{display:grid;gap:10px}
+.gal-main{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#0a1530;aspect-ratio:16/9}
+.gal-main img{display:block;width:100%;height:100%;object-fit:cover}
+.ba .after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--cut,50%))}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:2px;background:var(--ink);box-shadow:0 0 0 1px #0006;pointer-events:none}
+.ba .tagb{position:absolute;top:10px;font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:#0b1220d9;color:var(--ink);padding:6px 8px;border-radius:6px;pointer-events:none}
+.ba .tagb.l{left:10px}.ba .tagb.r{right:10px;color:var(--good)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.gal-cap{font-size:14.5px;color:var(--muted);margin:0;min-height:3em}
+.gal-cap b{font:600 12px var(--mono);color:var(--accent);margin-right:6px}
+.thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.thumb{all:unset;cursor:pointer;border-radius:8px;overflow:hidden;border:2px solid transparent;aspect-ratio:16/9;background:var(--surface2)}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover;opacity:.6;transition:opacity .15s}
+.thumb:hover img,.thumb[aria-pressed="true"] img{opacity:1}
+.thumb[aria-pressed="true"]{border-color:var(--accent)}
+.learn{margin:0;padding-left:18px;display:grid;gap:4px}
 footer{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:24px}
 footer h2{font-size:26px}
-@media (max-width:780px){.case{grid-template-columns:minmax(0,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:80px 1fr 44px}}
+@media (max-width:780px){.case{grid-template-columns:minmax(0,1fr)}.thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}.metrics{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:80px 1fr 44px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -158,10 +174,11 @@ footer h2{font-size:26px}
   <nav class="tabs" aria-label="Case studies">
     <div class="tablist" role="tablist">
       <button class="tab" role="tab" id="t-reporting" aria-controls="reporting" data-tab="reporting"><span>01</span>Automated reporting</button>
-      <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>02</span>AI agents</button>
-      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>03</span>NetSuite Expert</button>
-      <button class="tab" role="tab" id="t-venture" aria-controls="venture" data-tab="venture"><span>04</span>AI consultancy</button>
-      <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>05</span>Side project</button>
+      <button class="tab" role="tab" id="t-twin" aria-controls="twin" data-tab="twin"><span>02</span>3D digital twin</button>
+      <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>03</span>AI agents</button>
+      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>04</span>NetSuite Expert</button>
+      <button class="tab" role="tab" id="t-venture" aria-controls="venture" data-tab="venture"><span>05</span>AI consultancy</button>
+      <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>06</span>Side project</button>
     </div>
   </nav>
 
@@ -191,6 +208,30 @@ footer h2{font-size:26px}
         <div class="step"><span class="n">05</span>Deliver to management<span class="t ok">✓ 06:00</span></div>
       </div>
       <p class="note">A held record stops only its own line and is flagged for a person, so the rest of the report still goes out on time.</p>
+    </div>
+  </section>
+
+  <section class="case" role="tabpanel" id="twin" aria-labelledby="t-twin" hidden>
+    <div class="txt">
+      <div class="eyebrow">3D digital twin</div>
+      <h2>A 3D digital twin of a production plant that updates itself and can be verified</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>Management couldn't see what happened on the floor each day, or what the data system that processes production overnight was doing. The numbers lived in Excel files and logs.</dd></div>
+        <div><dt>What I built</dt><dd>A 3D model of the plant fed by real production data, in a single self-contained HTML file (~1.2 MB) that opens with a double click and holds 58 days of browsable history. Lines light up on the days they produced; each one can be clicked open.</dd></div>
+        <div><dt>How it stays trustworthy</dt><dd>Python extractors read the existing Excel files and logs in read-only mode, and every value keeps its source (file, sheet and cell). Calculated values are labelled ESTIMATED; missing data shows as "no data", never an invented number. Twice a day it adds new days only when their sources are complete, tests the page in a headless browser, publishes to SharePoint with a hash check, and rolls back on its own if a test fails.</dd></div>
+        <div><dt>What I learned</dt><dd><ul class="learn"><li>A visualization earns trust only if every number can be traced to its source.</li><li>Automation is worth it when it tests itself and rolls itself back.</li><li>Legibility can be designed and measured: less text on screen, detail one click away.</li></ul></dd></div>
+      </dl>
+      <p class="result"><b>0 manual steps</b> to update: each new day appears by morning, tested before publishing. Overlapping labels cut from <b>25 to 0</b> across 29 measured views, and <b>0 console errors</b> in 60+ automated screenshots.</p>
+      <div class="stack"><span>Three.js (WebGL)</span><span>JavaScript</span><span>Python</span><span>openpyxl</span><span>Playwright</span><span>headless Chrome</span><span>Microsoft Graph API</span><span>Task Scheduler</span><span>Git</span></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Screenshots · synthetic data</span><span class="try">Tap to browse</span></div>
+      <div class="gal">
+        <div class="gal-main" id="tw-main"><img id="tw-img" src="twin/01.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+        <p class="gal-cap" id="tw-cap"></p>
+        <div class="thumbs" id="tw-thumbs"></div>
+      </div>
+      <p class="note">Names and data changed for confidentiality. The screenshots show synthetic data.</p>
     </div>
   </section>
 
@@ -330,7 +371,7 @@ footer h2{font-size:26px}
   let me = false; try { me = localStorage.getItem("me") === "1"; } catch (e) {}
   if (ref) { track("set", "ref", ref); track("event", "ref_" + ref); }
   if (me) track("set", "owner", "bauti");
-  const TABS = ["reporting", "agents", "netsuite", "venture", "project"];
+  const TABS = ["reporting", "twin", "agents", "netsuite", "venture", "project"];
 
   function show(id, focus) {
     if (!TABS.includes(id)) id = "reporting";
@@ -363,6 +404,30 @@ footer h2{font-size:26px}
   // La demo del Dashboard Hub hereda el origen de la visita (si vino de una carta, sigue contando para esa empresa)
   document.querySelectorAll(".opslink").forEach(a => { a.href = "ops/?r=" + (ref || "portfolio"); });
   document.querySelectorAll("[data-track]").forEach(a => a.addEventListener("click", () => track("event", a.dataset.track)));
+  // Galería del gemelo digital: 5 capturas + carteles antes/después con deslizador
+  const TW = [
+    ["01", "Overview of the plant in 3D: glass blocks for each process area, loading docks, the data flow and a second plant marked “coming soon”."],
+    ["02", "The full dashboard: the day's KPIs against the 30-day average, the 3D view in the centre, output by line, the overnight run and alerts."],
+    ["03", "A process line up close: machines modelled from photos of the plant, articulated workers and thousands of animated particles on the belt."],
+    ["04", "Top-down view of the same 3D world: the full floor plan."],
+    ["05", "Framing by building: one click flies the camera to each one."],
+    ["ba", "Labels before and after. Drag across the image: all labels at once overlap at mid distance; by level, only the area in view shows, with collision checks (0 overlaps in 29 measured views)."]
+  ];
+  const twMain = $("tw-main"), twCap = $("tw-cap"), twThumbs = $("tw-thumbs");
+  function twShow(i) {
+    const [k, cap] = TW[i];
+    twMain.className = "gal-main" + (k === "ba" ? " ba" : "");
+    twMain.innerHTML = k === "ba"
+      ? '<img src="twin/06.jpg" alt="Before: all labels shown at once, overlapping" width="1600" height="900"><img class="after" src="twin/07.jpg" alt="After: labels by level, no overlaps" width="1600" height="900"><span class="line"></span><span class="tagb l">Before</span><span class="tagb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after">'
+      : `<img src="twin/${k}.jpg" alt="${cap.replace(/"/g, "&quot;")}" width="1600" height="900" decoding="async">`;
+    if (k === "ba") { const r = twMain.querySelector("input"); r.addEventListener("input", () => twMain.style.setProperty("--cut", r.value + "%")); twMain.style.setProperty("--cut", "50%"); }
+    twCap.innerHTML = `<b>${i + 1}/${TW.length}</b>${cap}`;
+    twThumbs.querySelectorAll(".thumb").forEach((b, j) => b.setAttribute("aria-pressed", j === i));
+  }
+  twThumbs.innerHTML = TW.map(([k], i) => `<button class="thumb" type="button" aria-label="Screenshot ${i + 1}"><img src="twin/${k === "ba" ? "07" : k}.jpg" alt="" loading="lazy" decoding="async"></button>`).join("");
+  twThumbs.addEventListener("click", e => { const b = e.target.closest(".thumb"); if (!b) return; const i = [...twThumbs.children].indexOf(b); twShow(i); track("event", "twin_" + TW[i][0]); });
+  twShow(0);
+
   $("ag-acts").addEventListener("click", e => {
     const b = e.target.closest("[data-ag]"); if (!b) return;
     track("event", "demo_agents_" + b.dataset.ag);
