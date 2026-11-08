@@ -1,28 +1,521 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f2f0e9">
-<title>Selected Work | Operations & Data</title><meta name="description" content="Selected projects in reporting, production systems, digital twins and workflow design.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Bautista Nasta · Data & Automation Specialist">
+<meta property="og:description" content="Interactive case studies in AI agents, ERP automation, process automation and an AI consultancy, rebuilt with fictitious data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bautinasta.github.io/">
+<meta name="twitter:card" content="summary">
+<title>Bautista Nasta · Data & Automation Specialist</title>
+<meta name="description" content="Data & Automation Specialist in Sydney. Interactive case studies in AI agents, ERP automation and process automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap">
 <style>
-:root{--paper:#f2f0e9;--white:#fbfaf6;--ink:#17202b;--muted:#65707a;--line:#d9d8d0;--blue:#315a83;--blue2:#233d57;--pale:#e7ecf0;--green:#a4b47d;--sans:"DM Sans",Arial,sans-serif;--serif:"Playfair Display",Georgia,serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,summary{font:inherit}.shell{max-width:1380px;width:calc(100% - 88px);margin:auto}.top{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{font-size:12px;font-weight:700;letter-spacing:.13em}.nav{display:flex;gap:30px;align-items:center;font-size:12px}.nav a{color:#475565}.nav a:hover{color:var(--blue)}.nav .contact{padding:9px 14px;border:1px solid #9ba5ac;color:var(--ink)}.hero{display:grid;grid-template-columns:.82fr 1.18fr;gap:54px;align-items:center;padding:68px 0 48px}.eyebrow,.kicker,.project-kind,.section-number{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600}.hero h1{font:500 clamp(46px,5.2vw,76px)/1.04 var(--serif);letter-spacing:-.045em;margin:18px 0 22px;max-width:570px}.hero h1 em{font-style:normal;color:var(--blue)}.hero p{max-width:490px;color:#56616b;line-height:1.8;font-size:15px}.hero-link{display:inline-flex;gap:10px;align-items:center;margin-top:10px;color:var(--blue);font-weight:600;font-size:12px;border-bottom:1px solid #8095a8;padding-bottom:4px}.hero-image{height:430px;position:relative;overflow:hidden;background:#d9e0e3;border:1px solid #d4d5cf}.hero-image img{width:100%;height:100%;object-fit:cover;display:block}.image-caption{position:absolute;left:0;right:0;bottom:0;padding:42px 18px 15px;color:white;background:linear-gradient(transparent,#101b27bd);font-size:11px}.image-caption span{display:block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}.intro-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:10px 0 75px}.intro-item{padding:19px 22px 18px 0;border-right:1px solid var(--line)}.intro-item+ .intro-item{padding-left:22px}.intro-item:last-child{border:0}.intro-item b{font:500 22px var(--serif);display:block;margin-bottom:3px}.intro-item span{font-size:11px;color:var(--muted)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:26px}.section-head h2{font:500 clamp(38px,4.5vw,58px)/1.07 var(--serif);letter-spacing:-.045em;margin:10px 0 0}.section-head p{max-width:340px;margin:0;color:var(--muted);font-size:12px}.work{margin-bottom:95px}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.project{background:var(--white);border:1px solid var(--line);min-width:0}.project:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.08fr .92fr}.project-visual{height:250px;position:relative;background:var(--pale);overflow:hidden}.project:first-child .project-visual{height:100%;min-height:365px}.project-visual img{width:100%;height:100%;object-fit:cover;display:block}.project-copy{padding:23px 25px 25px}.project:first-child .project-copy{padding:34px 38px;display:flex;flex-direction:column;justify-content:center}.project-topline{display:flex;justify-content:space-between;gap:12px}.project-kind{color:var(--blue);font-size:9px}.project-type{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.project h3{font:500 28px/1.14 var(--serif);letter-spacing:-.025em;margin:13px 0 9px}.project:first-child h3{font-size:39px;max-width:520px}.project-summary{font-size:12px;color:#5e6973;margin:0;max-width:600px}.open-hint{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:13px;border-top:1px solid var(--line);font-size:10px;color:var(--blue);font-weight:600}.open-hint span:last-child{font-size:17px}.detail{border-top:1px solid var(--line);padding:20px 25px 24px;background:#f5f4ef}.detail[hidden]{display:none}.detail-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}.detail h4{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--blue);margin:0 0 7px}.detail p{font-size:12px;color:#53606a;line-height:1.8;margin:0}.detail-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}.detail-tags span{border:1px solid #d4d6d0;padding:4px 8px;color:#596674;font-size:9px}.project summary{list-style:none;cursor:pointer;outline:none}.project summary::-webkit-details-marker{display:none}.project[open] .open-hint span:last-child{transform:rotate(45deg)}.report-ui{height:100%;min-height:250px;padding:18px;background:#e8edf0;display:flex;align-items:center;justify-content:center}.dashboard{background:#fff;width:min(100%,470px);border:1px solid #cbd2d7;padding:16px;box-shadow:0 12px 25px #192a3a12}.dash-title{font-size:11px;font-weight:700;color:#344556;padding-bottom:10px;border-bottom:1px solid #e3e7e8}.dash-layout{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.dash-card{border:1px solid #e5e8e7;padding:10px}.dash-card small{display:block;color:#71808a;font-size:8px;text-transform:uppercase;letter-spacing:.08em}.dash-card b{display:block;font-size:16px;color:#26384b;margin-top:5px}.bars{height:88px;display:flex;align-items:end;gap:7px;padding:8px 4px 0}.bars i{flex:1;background:#88a2b7;height:var(--h);border-radius:2px 2px 0 0}.bars i:nth-child(3n){background:#315a83}.line-chart{width:100%;height:86px}.process-visual{min-height:250px;background:#e8edf0;display:grid;place-items:center;padding:18px}.process-card{width:min(100%,300px);background:#fff;border:1px solid #cbd2d7;padding:18px}.process-row{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid #edf0ef;font-size:10px;color:#425363}.check{width:15px;height:15px;border:1px solid #91a7b6;color:#315a83;display:grid;place-items:center;font-size:9px}.flow-visual{min-height:250px;background:#e8edf0;display:grid;place-items:center;padding:18px}.flow-boxes{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:min(100%,300px)}.flow-box{background:#fff;border:1px solid #cbd2d7;padding:14px 10px;text-align:center;font-size:9px;color:#415466}.flow-box b{display:block;font-size:10px;color:#26384b;margin-bottom:4px}.about{display:grid;grid-template-columns:.52fr 1.48fr;gap:65px;border-top:1px solid var(--line);padding:38px 0 66px}.about h2{font:500 clamp(34px,4vw,50px)/1.08 var(--serif);margin:0 0 15px;letter-spacing:-.035em}.about p{max-width:730px;font-size:13px;color:#58636e;line-height:1.85}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:25px}.principles b{display:block;font-size:11px}.principles span{font-size:10px;color:var(--muted)}.footer{border-top:1px solid var(--line);padding:20px 0 28px;display:flex;justify-content:space-between;color:#76808a;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
-@media(max-width:800px){.shell{width:calc(100% - 48px)}.hero{grid-template-columns:1fr;gap:26px;padding-top:48px}.hero-copy{max-width:620px}.hero-image{height:360px}.project:first-child{grid-template-columns:1fr}.project:first-child .project-visual{min-height:300px}.project-grid{gap:13px}.project-copy{padding:19px}.project h3{font-size:24px}.project:first-child h3{font-size:35px}.about{gap:32px}}
-@media(max-width:560px){.shell{width:calc(100% - 36px)}.top{height:66px}.brand{font-size:10px}.nav{gap:14px;font-size:10px}.nav a:nth-child(2){display:none}.nav .contact{padding:7px 9px}.hero{padding:40px 0 28px;gap:20px}.hero h1{font-size:53px}.hero p{font-size:13px}.hero-image{height:275px}.intro-strip{grid-template-columns:1fr;margin:4px 0 55px}.intro-item,.intro-item+.intro-item{padding:12px 0;border-right:0;border-bottom:1px solid var(--line)}.intro-item:last-child{border:0}.intro-item b{font-size:19px}.section-head{display:block}.section-head h2{font-size:43px}.section-head p{margin-top:11px}.work{margin-bottom:68px}.project-grid{grid-template-columns:1fr}.project:first-child{grid-column:auto}.project:first-child .project-visual{min-height:260px}.project-visual{height:220px}.project-copy,.project:first-child .project-copy{padding:20px}.project:first-child h3{font-size:34px}.detail{padding:18px 20px}.detail-grid{grid-template-columns:1fr;gap:16px}.about{grid-template-columns:1fr;gap:18px;padding:30px 0 52px}.about h2{font-size:40px}.principles{grid-template-columns:1fr;gap:12px}.footer{flex-direction:column;gap:8px}}
+:root{
+  color-scheme:dark;
+  --bg:#090b09; --surface:#111410; --surface2:#151a14; --line:#2a3027;
+  --ink:#f0efe8; --muted:#a6aaa0; --dim:#777d71;
+  --accent:#c6f36a; --accent-ink:#090b09; --accent-soft:#202719; --good:#c6f36a; --good-soft:#202719; --warn:#e2be76; --warn-soft:#2e281a; --bad:#db8176; --bad-soft:#301b18;
+  --display:"Playfair Display",Georgia,serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+/* Siempre oscuro, en PC y en celular. */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:36px 56px;display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+.wrap>*,.case>*{min-width:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.hero{display:grid;gap:18px}
+.hero h1{font-weight:800;font-size:clamp(44px,6vw,70px);line-height:1.06}
+.hero h1 span{color:var(--accent)}
+.hero p{margin:0;max-width:64ch;color:var(--muted);font-size:18.5px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{all:unset;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:4px;transition:border-color .15s}
+.metric:hover{border-color:var(--accent)}
+.metric b{font:600 28px/1 var(--mono);font-variant-numeric:tabular-nums}
+.metric small{color:var(--muted);font-size:13.5px;line-height:1.35}
+.metric em{font:600 12px var(--mono);font-style:normal;color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font:700 15px/1 var(--display);text-decoration:none;padding:12px 16px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--surface);cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.small{font-size:13px;padding:9px 12px}
+.btn.good{background:var(--good);border-color:var(--good);color:#fff}
+.btn.bad{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,var(--line));background:transparent}
+.btn[disabled]{opacity:.45;cursor:default}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);padding-block:10px;margin-inline:-20px;padding-inline:20px;border-bottom:1px solid var(--line)}
+.tablist{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tablist::-webkit-scrollbar{display:none}
+.tab{all:unset;cursor:pointer;white-space:nowrap;font:700 15px/1 var(--display);padding:11px 14px;border-radius:999px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.tab span{font:600 11px var(--mono);color:var(--dim)}
+.tab:hover{color:var(--ink);background:var(--surface2)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.tab[aria-selected="true"] span{color:var(--bg);opacity:.7}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
+.case .txt{display:grid;gap:14px}
+.case h2{font-size:clamp(24px,3.2vw,31px);line-height:1.15}
+.case dl{margin:0;display:grid;gap:10px}
+.case dt{font:600 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.case dd{margin:3px 0 0}
+.result{background:var(--good-soft);border-radius:10px;padding:10px 14px;margin:0}
+.result b{color:var(--good)}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font:500 12.5px/1 var(--mono);background:var(--surface2);color:var(--muted);padding:6px 9px;border-radius:6px}
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:12px;box-shadow:0 14px 36px -24px #0f1b2d66}
+.demo-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.cap{font:500 12px/1.3 var(--mono);color:var(--dim)}
+.opslink{display:grid;gap:4px;margin-top:14px;padding:16px 18px;border-radius:14px;border:1px solid var(--accent);background:var(--accent-soft);color:var(--ink);text-decoration:none;transition:transform .15s}
+.opslink:hover{transform:translateY(-2px)}
+.opslink .ol-k{font:600 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.opslink b{font:700 17px/1.3 var(--display);color:var(--ink)}
+.opslink .ol-d{font-size:14px;line-height:1.5;color:var(--muted)}
+.try{font:600 12px var(--mono);color:var(--accent);background:var(--accent-soft);padding:5px 8px;border-radius:6px}
+.note{color:var(--dim);font-size:14px;margin:0}
+.approve{border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:8px}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;font-size:15px}
+.t{font:500 12.5px var(--mono);color:var(--muted)}
+.ok{color:var(--good);font-weight:700}
+.hold{color:var(--warn);font-weight:700}
+.acts{display:flex;flex-wrap:wrap;gap:8px}
+.diff{font:500 12.5px/1.6 var(--mono);background:var(--surface2);border-radius:10px;padding:10px 12px;margin:0;overflow-x:auto}
+.diff .m{color:var(--bad)} .diff .p{color:var(--good)}
+.status{font-size:15px;border-radius:10px;padding:10px 12px;margin:0;display:grid;gap:8px;justify-items:start}
+.status.done{background:var(--good-soft)}
+.status.no{background:var(--surface2)}
+.chat{display:grid;gap:10px;max-height:340px;overflow:auto;padding-right:2px}
+.msg{border-radius:12px;padding:10px 12px;font-size:15px;max-width:92%}
+.msg.q{background:var(--accent);color:var(--accent-ink);justify-self:end}
+.msg.a{background:var(--surface2)}
+.msg.a small{display:block;margin-top:6px;font:500 12px var(--mono);color:var(--dim)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{all:unset;cursor:pointer;font:600 13.5px/1.3 var(--body);padding:8px 11px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[disabled]{opacity:.4;cursor:default}
+.pipe{display:grid;gap:8px}
+.step{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;background:var(--surface2);border-radius:10px;padding:10px 12px;font-size:15px;transition:opacity .2s}
+.step .n{font:600 13px var(--mono);color:var(--accent)}
+.step.wait{opacity:.45}
+.step.run .t::before{content:"● ";color:var(--accent)}
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:96px 1fr 50px;gap:10px;align-items:center;font-size:14.5px}
+.track{height:12px;background:var(--surface2);border-radius:6px;overflow:hidden}
+.fill{display:block;height:100%;background:var(--accent);border-radius:6px;transition:width .7s ease}
+.v{font:600 13.5px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.short{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.short li{display:flex;justify-content:space-between;gap:10px;font-size:14px;background:var(--surface2);border-radius:8px;padding:7px 10px}
+.short li b{font:600 12.5px var(--mono);color:var(--good)}
+.score-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font-size:14.5px}
+.gauge{height:10px;background:var(--surface2);border-radius:6px;overflow:hidden}
+.gfill{display:block;height:100%;background:var(--good);border-radius:6px}
+.tracker{display:grid;gap:6px}
+.trow{display:grid;grid-template-columns:minmax(0,1.4fr) .6fr 1.2fr .9fr;gap:8px;align-items:center;font-size:14px;background:var(--surface2);border-radius:8px;padding:8px 10px}
+.trow.head{background:none;font:600 11.5px var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding-block:0}
+.trow span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sbar{display:inline-block;width:38px;height:6px;background:var(--line);border-radius:4px;margin-right:6px;vertical-align:middle;overflow:hidden}
+.sbar i{display:block;height:100%;background:var(--accent);transition:width .8s ease}
+.trow.flash{outline:2px solid var(--good)}
+.gal{display:grid;gap:10px}
+.gal-main{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#0a1530;aspect-ratio:16/9}
+.gal-main img{display:block;width:100%;height:100%;object-fit:cover}
+.ba .after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--cut,50%))}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:2px;background:var(--ink);box-shadow:0 0 0 1px #0006;pointer-events:none}
+.ba .tagb{position:absolute;top:10px;font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:#0b1220d9;color:var(--ink);padding:6px 8px;border-radius:6px;pointer-events:none}
+.ba .tagb.l{left:10px}.ba .tagb.r{right:10px;color:var(--good)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.gal-cap{font-size:14.5px;color:var(--muted);margin:0;min-height:3em}
+.gal-cap b{font:600 12px var(--mono);color:var(--accent);margin-right:6px}
+.thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.thumb{all:unset;cursor:pointer;border-radius:8px;overflow:hidden;border:2px solid transparent;aspect-ratio:16/9;background:var(--surface2)}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover;opacity:.6;transition:opacity .15s}
+.thumb:hover img,.thumb[aria-pressed="true"] img{opacity:1}
+.thumb[aria-pressed="true"]{border-color:var(--accent)}
+.learn{margin:0;padding-left:18px;display:grid;gap:4px}
+footer{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:24px}
+footer h2{font-size:26px}
+@media (max-width:780px){.case{grid-template-columns:minmax(0,1fr)}.thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}.metrics{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:80px 1fr 44px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+:root{color-scheme:dark;--bg:#090b09;--surface:#111410;--surface2:#151a14;--line:#2a3027;--ink:#f0efe8;--muted:#a6aaa0;--dim:#747b70;--accent:#c6f36a;--accent-ink:#10140b;--accent-soft:#1a2115;--good:#b4cf82;--good-soft:#182116;--warn:#d4ae66;--warn-soft:#292316;--bad:#dd8a82;--bad-soft:#2b1715;--display:"Playfair Display",Georgia,serif;--body:"DM Sans",Arial,sans-serif;--mono:"DM Mono",monospace}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);overflow-x:hidden}a{color:inherit}.site-nav{height:72px;max-width:1360px;margin:auto;padding:0 42px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase}.brand span{color:var(--muted)}.site-nav nav{display:flex;gap:28px}.site-nav nav a{font:10px var(--mono);text-transform:uppercase;letter-spacing:.12em;text-decoration:none;color:var(--muted)}.site-nav nav a:hover{color:var(--accent)}
+.wrap{max-width:1360px;width:calc(100% - 84px);padding:28px 0 60px;gap:28px}.hero{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:15px 42px;align-items:center;min-height:580px;padding:35px 0 40px}.hero .eyebrow{grid-column:1;grid-row:1;color:var(--accent);font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase}.hero h1{grid-column:1;grid-row:2;font:500 clamp(50px,6.2vw,86px)/.98 var(--display);letter-spacing:-.055em;max-width:650px}.hero h1 span{color:var(--accent)}.hero p{grid-column:1;grid-row:3;color:var(--muted);font-size:15px;max-width:550px;line-height:1.8}.hero-quick{grid-column:1;grid-row:4;display:flex;flex-wrap:wrap;gap:8px}.hero-quick a{border:1px solid var(--line);padding:7px 10px;border-radius:2px;color:var(--muted);text-decoration:none;font:9px var(--mono);text-transform:uppercase;letter-spacing:.08em}.hero-quick a:hover{border-color:var(--accent);color:var(--accent)}.hero-actions{grid-column:1;grid-row:5;display:flex;gap:10px}.hero-photo{grid-column:2;grid-row:1/7;position:relative;min-height:500px;align-self:stretch;border:1px solid var(--line);background:#171b18;overflow:visible}.hero-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(.68)}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090b0933,transparent 55%),linear-gradient(0deg,#090b09a8,transparent 44%);pointer-events:none}.hero-photo-caption{position:absolute;z-index:2;left:17px;bottom:13px;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}.hero-photo-caption a{display:block;margin-top:5px;font:8px var(--body);letter-spacing:0;text-transform:none;color:#c5c6bd;opacity:.75}.hero-dashboard{position:absolute;z-index:3;right:-22px;top:34px;width:min(275px,61%);background:#111410f2;border:1px solid #565e4a;padding:15px;box-shadow:0 16px 45px #0008;font-size:10px}.hd-top{display:flex;justify-content:space-between;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--line);font:9px var(--mono);text-transform:uppercase;letter-spacing:.06em}.hd-top span:last-child{color:var(--accent);font-size:8px}.hd-body{display:grid;grid-template-columns:1fr auto;gap:9px;padding-top:12px;color:var(--muted);font-size:10px}.hd-body b{grid-column:1/-1;color:var(--ink);font:500 16px var(--display);padding-bottom:2px}.hd-body i{width:7px;height:7px;border-radius:50%;background:var(--accent);align-self:center}.hero .links{grid-column:1;grid-row:6;gap:9px;margin-top:0}
+.btn{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 15px;border-radius:2px;border:1px solid var(--line);background:transparent;color:var(--ink)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#11150c}.btn:hover{border-color:var(--accent);transform:translateY(-1px)}.btn.good{background:var(--good);border-color:var(--good);color:#111410}.tabs{position:sticky;top:0;background:#090b09ee;margin-inline:0;padding:12px 0;border-block:1px solid var(--line);backdrop-filter:blur(12px)}.tablist{gap:5px}.tab{border-radius:2px;font:10px var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:12px 13px;color:var(--muted)}.tab span{font:9px var(--mono);color:var(--dim)}.tab:hover{background:var(--surface2)}.tab[aria-selected="true"]{background:var(--accent);color:#11150c}.tab[aria-selected="true"] span{color:#11150c}.case{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:42px;align-items:start;padding:28px 0 34px}.case .txt{gap:16px}.eyebrow{color:var(--accent);font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase}.case h2{font:500 clamp(34px,4.1vw,53px)/1.04 var(--display);letter-spacing:-.045em}.case dl{gap:13px}.case dt{font:9px var(--mono);letter-spacing:.12em;color:var(--accent)}.case dd{font-size:13px;line-height:1.78;color:#c2c4bc}.result{border-radius:2px;border-left:2px solid var(--accent);background:var(--surface);padding:12px 15px;font-size:12px;color:var(--muted)}.result b{color:var(--ink)}.stack span{border-radius:2px;background:var(--surface2);font:9px var(--mono);text-transform:uppercase;padding:7px 9px;color:var(--muted)}.demo{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:17px;box-shadow:none}.demo-head{padding-bottom:10px;border-bottom:1px solid var(--line)}.cap{font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.opslink{border-radius:2px;background:var(--surface2);border-color:#526040}.opslink .ol-k,.try{color:var(--accent)}.try{background:var(--surface2);border-radius:2px}.step,.approve,.msg.a,.chip,.trow,.short li{border-radius:2px}.step{background:var(--surface2);font-size:12px}.step .n{color:var(--accent)}.diff{border-radius:2px;background:#0b0d0a}.chat{max-height:360px}.msg{border-radius:2px}.msg.q{background:var(--accent);color:#11150c}.chips .chip{background:#0b0d0a;border-radius:2px;font-size:11px}.gal-main,.thumb{border-radius:2px}.gal-main{background:#111410}.gal-cap{font-size:12px}.gal-cap b{color:var(--accent)}.thumb[aria-pressed="true"]{border-color:var(--accent)}.learn{font-size:12px}footer{border-top:1px solid var(--line);padding-top:28px}footer h2{font:500 38px var(--display)}#about{color:var(--muted)}
++@media(max-width:900px){.site-nav{padding-inline:24px}.wrap{width:calc(100% - 48px)}.hero{min-height:0}.hero-photo{min-height:430px}.case{gap:24px}.hero-dashboard{right:-10px}}
++@media(max-width:680px){.site-nav{height:62px;padding-inline:18px}.site-nav nav{gap:14px}.site-nav nav a{font-size:8px}.brand{font-size:9px}.brand span{display:none}.wrap{width:calc(100% - 36px);padding-top:16px;gap:18px}.hero{grid-template-columns:minmax(0,1fr);gap:14px;padding:30px 0 25px}.hero .eyebrow,.hero h1,.hero p,.hero-quick,.hero-actions,.hero-photo,.hero .links{grid-column:1;grid-row:auto}.hero h1{font-size:clamp(48px,13vw,68px)}.hero p{font-size:13px}.hero-photo{min-height:310px;margin:8px 6px 5px 0}.hero-dashboard{top:16px;right:-6px;width:58%;padding:11px}.hero-actions{flex-wrap:wrap}.hero .links{display:none}.tabs{margin-inline:-18px;padding-inline:18px}.tablist{gap:2px}.tab{font-size:9px;padding:10px 11px}.case{grid-template-columns:minmax(0,1fr);gap:18px;padding-top:22px}.case h2{font-size:39px}.case dd{font-size:12px}.demo{padding:13px}.thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}.bar{grid-template-columns:76px 1fr 42px}.trow{grid-template-columns:minmax(0,1.2fr) .5fr 1fr .7fr;font-size:11px}.hero-quick{gap:6px}.hero-quick a{font-size:8px;padding:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Editorial dark direction: calm surfaces, warm type and restrained lime. */
+:root{--bg:#090b09;--surface:#111410;--surface2:#151a14;--line:#2a3027;--ink:#f0efe8;--muted:#a6aaa0;--dim:#777d71;--accent:#c6f36a;--accent-ink:#090b09;--accent-soft:#202719;--good:#c6f36a;--good-soft:#202719;--display:"Playfair Display",Georgia,serif;--body:"DM Sans",Arial,sans-serif;--mono:"DM Mono",ui-monospace,monospace}
+body{background:var(--bg);color:var(--ink)}
+.site-nav{background:#090b09e8;border-color:#2a3027}.site-nav nav a{color:#d0d1c8}.hero h1,.case h2,footer h2{font-family:var(--display);font-weight:500;letter-spacing:-.04em}.hero h1 span{color:var(--ink)}.hero .eyebrow,.eyebrow,.tab span,.case .eyebrow,.demo-head .cap,.opslink .ol-k{color:var(--accent)}
+.hero-photo{border:1px solid var(--line);background:#111410}.hero-photo>img{filter:brightness(.62) saturate(.72)}.hero-dashboard{background:#111410eF;border:1px solid #596247;box-shadow:0 14px 36px #0008}.hd-top{color:var(--ink)}.hd-mini{border-color:#394033}.hero-quick a{border-color:var(--line);background:#111410;color:var(--muted)}
+.tabs{border-color:var(--line)}.tab{color:var(--muted)}.tab[aria-selected=true]{color:var(--ink);border-color:var(--accent)}.case{border-color:var(--line)}.case h2{font-size:clamp(34px,4vw,52px);line-height:1.1}.case dd,.hero p{color:var(--muted)}.demo{background:var(--surface);border-color:var(--line);box-shadow:none}.btn,.chip,.opslink,.step,.approve,.msg,.trow,.short li,.thumb{border-radius:3px}.btn{border-color:#495043;color:var(--ink)}.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}.report-ui,.process-visual,.flow-visual{background:#111410}.dashboard,.process-card,.flow-box{background:#151a14;border-color:#30372b;color:var(--ink)}.dash-title,.dash-card b,.flow-box b{color:var(--ink)}.dash-card{border-color:#30372b;background:#111410}.dash-card small{color:var(--muted)}.bars i{background:#7b8b50}.bars i:nth-child(3n),.line-chart path[stroke="#315a83"]{stroke:var(--accent);background:var(--accent)}.process-row{color:#d5d6ce;border-color:#30372b}.check{border-color:#68764e;color:var(--accent)}.result{background:#111410;border-color:#596247}.stack span{background:#151a14;color:var(--muted)}.gal-main{background:#111410}.note{color:var(--muted)}.msg.q{background:#202719;color:var(--ink)}footer{border-color:var(--line)}
+@media(max-width:680px){.hero h1{font-size:clamp(45px,12vw,62px)}.case h2{font-size:37px}.hero-photo{min-height:300px}}
 </style>
 </head>
-<body><div class="shell">
-<header class="top"><a class="brand" href="#top">SELECTED WORK</a><nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">Approach</a><a class="contact" href="#work">Explore projects</a></nav></header>
-<main id="top">
-<section class="hero"><div class="hero-copy"><span class="eyebrow">Operations / Data / Automation</span><h1>Making everyday work <em>easier to see.</em></h1><p>A selection of practical tools for production, reporting and business operations. Built to make useful information easier to find and everyday processes easier to follow.</p><a class="hero-link" href="#work">Browse selected projects <span aria-hidden="true">v</span></a></div><div class="hero-image"><img src="plant.svg" alt="An illustrated 3D model of an industrial production floor"><div class="image-caption"><span>Digital twin / Production environment</span>A working space, seen from a new angle</div></div></section>
-<section class="intro-strip" aria-label="Areas of work"><div class="intro-item"><b>Production systems</b><span>Facility models and operational context</span></div><div class="intro-item"><b>Reporting tools</b><span>Clear views built around daily work</span></div><div class="intro-item"><b>Workflow design</b><span>Connected steps with useful review points</span></div></section>
-<section class="work" id="work"><div class="section-head"><div><span class="section-number">Selected projects</span><h2>Made for the work at hand.</h2></div><p>Open a project for a closer look at the idea, the workflow and the tools behind it.</p></div><div class="project-grid">
-<details class="project"><summary><div class="project-visual"><img src="plant.svg" alt="3D model of a production facility"></div><div class="project-copy"><div class="project-topline"><span class="project-kind">Production / Digital twin</span><span class="project-type">01</span></div><h3>A clearer way to explore a production plant.</h3><p class="project-summary">A 3D model that brings the layout and production areas into view.</p><div class="open-hint"><span>Open project details</span><span aria-hidden="true">+</span></div></div></summary><div class="detail"><div class="detail-grid"><div><h4>The idea</h4><p>An interactive model of a production facility gives each area a visual place in the wider operation. It helps orient a viewer before they explore how work moves through the plant.</p></div><div><h4>What is inside</h4><p>Facility views, area labels and process context, organized as one navigable environment. The images are illustrative and omit live operational data.</p></div></div><div class="detail-tags"><span>3D model</span><span>Production layout</span><span>Operational context</span></div></div></details>
-<details class="project"><summary><div class="project-visual report-ui" role="img" aria-label="Illustrative production reporting dashboard"><div class="dashboard"><div class="dash-title">Production overview <span style="float:right;color:#7b8791;font-weight:400">Daily view</span></div><div class="dash-layout"><div class="dash-card"><small>Line activity</small><div class="bars"><i style="--h:39%"></i><i style="--h:57%"></i><i style="--h:47%"></i><i style="--h:74%"></i><i style="--h:64%"></i><i style="--h:88%"></i></div></div><div class="dash-card"><small>Reporting status</small><svg class="line-chart" viewBox="0 0 160 86" aria-hidden="true"><path d="M5 70H155M5 48H155M5 26H155" stroke="#e5e9e9"/><path d="M7 63 35 53 61 56 88 37 112 42 151 17" fill="none" stroke="#315a83" stroke-width="3"/><circle cx="151" cy="17" r="4" fill="#315a83"/></svg></div></div></div></div><div class="project-copy"><div class="project-topline"><span class="project-kind">Reporting / Production</span><span class="project-type">02</span></div><h3>Reporting that is easier to follow.</h3><p class="project-summary">A practical dashboard concept for bringing recurring production information into one readable view.</p><div class="open-hint"><span>Open project details</span><span aria-hidden="true">+</span></div></div></summary><div class="detail"><div class="detail-grid"><div><h4>The idea</h4><p>Make a recurring report easier to review by putting the main categories, checks and trends in one consistent layout.</p></div><div><h4>How it works</h4><p>Data is gathered, checked and arranged into a repeatable reporting flow. The interface prioritizes readable labels and a clear path from overview to detail.</p></div></div><div class="detail-tags"><span>Reporting</span><span>Data validation</span><span>Dashboard design</span></div></div></details>
-<details class="project"><summary><div class="project-visual process-visual" role="img" aria-label="Illustrative checklist for a reviewed workflow"><div class="process-card"><div class="dash-title">Workflow checklist</div><div class="process-row"><span class="check">&#10003;</span>Gather the source information</div><div class="process-row"><span class="check">&#10003;</span>Prepare a suggested next step</div><div class="process-row"><span class="check">&#10003;</span>Review before handoff</div></div></div><div class="project-copy"><div class="project-topline"><span class="project-kind">Workflow / Review</span><span class="project-type">03</span></div><h3>Small automations with a clear handoff.</h3><p class="project-summary">A workflow concept that keeps review steps visible when a task needs a person's judgment.</p><div class="open-hint"><span>Open project details</span><span aria-hidden="true">+</span></div></div></summary><div class="detail"><div class="detail-grid"><div><h4>The idea</h4><p>Automate repeatable preparation work while keeping an obvious place for someone to review, adjust or approve the next step.</p></div><div><h4>What it emphasizes</h4><p>Clear instructions, visible status and a deliberate handoff. The workflow is described in everyday terms rather than as an AI feature.</p></div></div><div class="detail-tags"><span>Process mapping</span><span>Automation</span><span>Review steps</span></div></div></details>
-<details class="project"><summary><div class="project-visual flow-visual" role="img" aria-label="Illustrative connected business workflow"><div class="flow-boxes"><div class="flow-box"><b>Intake</b>Capture the request</div><div class="flow-box"><b>Plan</b>Make the next step clear</div><div class="flow-box"><b>Deliver</b>Keep work visible</div><div class="flow-box"><b>Reference</b>Keep useful context</div></div></div><div class="project-copy"><div class="project-topline"><span class="project-kind">Business / Process</span><span class="project-type">04</span></div><h3>Connecting the steps around a project.</h3><p class="project-summary">A simple operating flow that links intake, planning, delivery and shared reference.</p><div class="open-hint"><span>Open project details</span><span aria-hidden="true">+</span></div></div></summary><div class="detail"><div class="detail-grid"><div><h4>The idea</h4><p>Give related business activities a shared structure so handoffs are easier to understand and less information gets lost between steps.</p></div><div><h4>What it covers</h4><p>A connected view of requests, project stages, follow-up and supporting notes, with clear ownership at each step.</p></div></div><div class="detail-tags"><span>Process design</span><span>Business systems</span><span>CRM concepts</span></div></div></details>
-<details class="project"><summary><div class="project-visual process-visual" role="img" aria-label="Illustrative guide to documented procedures"><div class="process-card"><div class="dash-title">Reference guide</div><div class="process-row"><span class="check">1</span>Find the right procedure</div><div class="process-row"><span class="check">2</span>Check the source note</div><div class="process-row"><span class="check">3</span>Follow the documented steps</div></div></div><div class="project-copy"><div class="project-topline"><span class="project-kind">Knowledge / ERP</span><span class="project-type">05</span></div><h3>Everyday guidance, close to its source.</h3><p class="project-summary">A reference tool concept for making documented procedures easier to find and use.</p><div class="open-hint"><span>Open project details</span><span aria-hidden="true">+</span></div></div></summary><div class="detail"><div class="detail-grid"><div><h4>The idea</h4><p>Organize procedural knowledge so someone can move from a question to a relevant guide without losing the context behind it.</p></div><div><h4>What it emphasizes</h4><p>Clear sources, practical language and a direct route back to the documented process when more detail is needed.</p></div></div><div class="detail-tags"><span>Knowledge organization</span><span>ERP processes</span><span>Documentation</span></div></div></details>
-</div></section>
-<section class="about" id="about"><div><span class="section-number">A note on the work</span></div><div><h2>Good systems start with understanding the process.</h2><p>The projects here focus on the things that make work clearer: a useful view of the plant, a report people can read, a workflow with sensible handoffs and guidance that stays close to its source.</p><div class="principles"><div><b>Start with the workflow</b><span>Understand the steps already in use.</span></div><div><b>Make information readable</b><span>Put the useful context where it is needed.</span></div><div><b>Keep the handoff clear</b><span>Make it easy to see what happens next.</span></div></div></div></section>
-</main><footer class="footer"><span>Selected work</span><span>Operations / Reporting / Systems</span><span>Independent portfolio</span></footer>
-</div><script>document.querySelectorAll('.project').forEach((card)=>card.addEventListener('toggle',()=>{const panel=card.querySelector('.detail');if(panel)panel.hidden=!card.open}));</script></body></html>
+<body>
+<header class="site-nav"><a class="brand" href="#top">BN <span>/ BAUTISTA NASTA</span></a><nav><a href="#project-work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div class="eyebrow">Bautista Nasta / Data / Operations / Automation</div>
+    <h1>I make complex operations <span>work better.</span></h1>
+    <p>I build data products, automate operational processes and develop systems that make complex workflows easier to understand and manage. Explore selected work in production reporting, digital twins, ERP tools and process automation.</p>
+    <div class="hero-quick" aria-label="Selected work"><a href="#reporting" data-go="reporting">Automated reporting</a><a href="#twin" data-go="twin">Digital twin</a><a href="#agents" data-go="agents">Process automation</a></div>
+    <div class="hero-actions"><a class="btn primary" href="#project-work">Explore selected work</a><a class="btn" href="#contact">Get in touch</a></div>
+    <div class="hero-photo" role="img" aria-label="Sydney Harbour Bridge at night"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sydney_Harbour_Bridge_at_night.jpg/1280px-Sydney_Harbour_Bridge_at_night.jpg" alt="Sydney Harbour Bridge at night" fetchpriority="high" decoding="async"><div class="hero-photo-caption">Sydney / Australia <a href="https://commons.wikimedia.org/wiki/File:Sydney_Harbour_Bridge_at_night.jpg" target="_blank" rel="noopener">Photo by Sander van Dijk / CC BY 2.0</a></div><div class="hero-dashboard"><div class="hd-top"><span>Production overview</span><span>Illustrative demo</span></div><div class="hd-body"><b>Daily report</b><span>Source checks</span><i></i><span>Workflow status</span><i></i><span>Review queue</span><i></i></div></div></div>
+    <div class="links">
+      <a class="btn primary" href="mailto:bautinasta@gmail.com">bautinasta@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/bautista-nasta" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="#contact">Contact</a>
+    </div>
+  </header>
 
+  <nav class="tabs" id="project-work" aria-label="Case studies">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" id="t-reporting" aria-controls="reporting" data-tab="reporting"><span>01</span>Automated reporting</button>
+      <button class="tab" role="tab" id="t-twin" aria-controls="twin" data-tab="twin"><span>02</span>3D digital twin</button>
+      <button class="tab" role="tab" id="t-agents" aria-controls="agents" data-tab="agents"><span>03</span>AI agents</button>
+      <button class="tab" role="tab" id="t-netsuite" aria-controls="netsuite" data-tab="netsuite"><span>04</span>NetSuite Expert</button>
+      <button class="tab" role="tab" id="t-venture" aria-controls="venture" data-tab="venture"><span>05</span>AI consultancy</button>
+      <button class="tab" role="tab" id="t-project" aria-controls="project" data-tab="project"><span>06</span>Side project</button>
+    </div>
+  </nav>
+
+  <section class="case" role="tabpanel" id="reporting" aria-labelledby="t-reporting">
+    <div class="txt">
+      <div class="eyebrow">Process automation</div>
+      <h2>Production reporting, arranged for a clearer review</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>Daily and monthly management reports were assembled by hand from raw plant data, spreadsheets and manual checks.</dd></div>
+        <div><dt>What I built</dt><dd>An automated cycle from raw plant data to management reports, with controls that fix routine entry errors and halt when a record is ambiguous, so wrong figures never reach management. Scheduled reporting jobs are monitored with regular source and system checks.</dd></div>
+      </dl>
+      <p class="result"><b>Built for a repeatable handoff.</b> The reporting flow brings source checks, review holds and scheduled delivery into one process.</p>
+      <div class="stack"><span>Python</span><span>pandas</span><span>SQL</span><span>scheduled jobs</span><span>Power BI</span></div>
+      <a class="opslink" href="ops/" target="_blank" rel="noopener" data-track="ops_open">
+        <span class="ol-k">Interactive demo</span>
+        <b>Open the full dashboard hub ↗</b>
+        <span class="ol-d">Four dashboards that rebuild and publish themselves every night (daily report, weekly review, lot records, system health) plus the ERP migration tracker. Fictitious data, same design as the real one.</span>
+      </a>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap" id="rp-cap">Sample run · illustrative demo data</span><button class="btn small primary" type="button" id="rp-run">▶ Run again</button></div>
+      <div class="pipe" id="rp-pipe">
+        <div class="step"><span class="n">01</span>Gather source records<span class="t ok">✓ source read</span></div>
+        <div class="step"><span class="n">02</span>Fix routine entry errors<span class="t ok">✓ checked</span></div>
+        <div class="step"><span class="n">03</span>Sample record needs review<span class="t hold">⏸ held for review</span></div>
+        <div class="step"><span class="n">04</span>Build daily report<span class="t ok">✓ prepared</span></div>
+        <div class="step"><span class="n">05</span>Deliver to management<span class="t ok">✓ ready</span></div>
+      </div>
+      <p class="note">A flagged sample is held for review while the rest of the demonstration continues.</p>
+    </div>
+  </section>
+
+  <section class="case" role="tabpanel" id="twin" aria-labelledby="t-twin" hidden>
+    <div class="txt">
+      <div class="eyebrow">3D digital twin</div>
+      <h2>A 3D digital twin of a production plant that updates itself and can be verified</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>Facility layout and process context were easier to review when presented together. Information lived across spreadsheets and system logs.</dd></div>
+        <div><dt>What I built</dt><dd>A self-contained 3D model organizes production areas and browsable history. Viewers can select a line and inspect the context behind the displayed information.</dd></div>
+        <div><dt>How it stays trustworthy</dt><dd>Python extractors read the existing Excel files and logs in read-only mode, and every value keeps its source (file, sheet and cell). Calculated values are labelled ESTIMATED; missing data shows as "no data", never an invented number. The publishing workflow adds records only when sources are complete, tests the page, checks the published copy and can roll back if a check fails.</dd></div>
+        <div><dt>What I learned</dt><dd><ul class="learn"><li>A visualization earns trust only if every number can be traced to its source.</li><li>Automation is worth it when it tests itself and rolls itself back.</li><li>Legibility can be designed and measured: less text on screen, detail one click away.</li></ul></dd></div>
+      </dl>
+      <p class="result"><b>Designed for traceability.</b> Source references, labeled estimates and missing-data states make the visual system easier to inspect.</p>
+      <div class="stack"><span>Three.js (WebGL)</span><span>JavaScript</span><span>Python</span><span>openpyxl</span><span>Playwright</span><span>headless Chrome</span><span>Microsoft Graph API</span><span>Task Scheduler</span><span>Git</span></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Screenshots · synthetic data</span><span class="try">Tap to browse</span></div>
+      <div class="gal">
+        <div class="gal-main" id="tw-main"><img id="tw-img" src="twin/01.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+        <p class="gal-cap" id="tw-cap"></p>
+        <div class="thumbs" id="tw-thumbs"></div>
+      </div>
+      <p class="note">Names and data changed for confidentiality. The screenshots show synthetic data.</p>
+    </div>
+  </section>
+
+  <section class="case" role="tabpanel" id="agents" aria-labelledby="t-agents" hidden>
+    <div class="txt">
+      <div class="eyebrow">AI agents, safely</div>
+      <h2>Agents that propose changes for a person to review</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>Documented operating procedures are repetitive, but a mistake in production data is costly.</dd></div>
+        <div><dt>What I built</dt><dd>Task-focused agents prepare suggested changes from documented procedures. The demo keeps review visible and uses a sandbox-style check before a person approves an example.</dd></div>
+      </dl>
+      <p class="result"><b>Review stays in the loop.</b> The interface makes the proposed change and its supporting evidence visible before an approval decision.</p>
+      <div class="stack"><span>Claude</span><span>Claude Code</span><span>sandbox</span><span>replay tests</span></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Approval request · illustrative demo data</span><span class="try">Try it</span></div>
+      <div class="approve">
+        <div class="row"><b>Sample review · illustrative changes</b><span class="t">Agent: Reconciliation</span></div>
+        <div class="row"><span>Replay sample history</span><span class="ok">No sample differences</span></div>
+        <div class="row"><span>Sample changes</span><span>Illustrative only</span></div>
+        <pre class="diff" id="ag-diff" hidden><span class="m">- Sample item A  quantity 18</span>  <span class="p">+ 20</span>  illustrative
+<span class="m">- Sample item B  quantity 9</span>   <span class="p">+ 8</span>   illustrative
+<span class="m">- Sample item C  quantity 20</span>  <span class="p">+ 22</span>  illustrative</pre>
+        <div class="acts" id="ag-acts">
+          <button class="btn small good" type="button" data-ag="approve">Approve</button>
+          <button class="btn small" type="button" data-ag="review">Review changes</button>
+          <button class="btn small bad" type="button" data-ag="reject">Reject</button>
+        </div>
+        <div class="status" id="ag-status" role="status" hidden></div>
+      </div>
+      <p class="note">Illustrative demo only. No production records are changed.</p>
+    </div>
+  </section>
+
+  <section class="case" role="tabpanel" id="netsuite" aria-labelledby="t-netsuite" hidden>
+    <div class="txt">
+      <div class="eyebrow">Applied AI + ERP</div>
+      <h2>ERP process assistant</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>ERP procedures and issue notes were spread across documents, making a reliable answer difficult to find.</dd></div>
+        <div><dt>What I built</dt><dd>An assistant interface connects documented ERP procedures with issue notes and reference queries. The project focuses on making answers easier to trace back to a source.</dd></div>
+      </dl>
+      <p class="result"><b>Grounded in documented process.</b> Responses include the reference used so the next step can be checked.</p>
+      <div class="stack"><span>Claude</span><span>MCP</span><span>NetSuite</span><span>SuiteQL</span></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Conversation · illustrative demo data</span><span class="try">Ask a question</span></div>
+      <div class="chat" id="ns-chat" aria-live="polite">
+        <div class="msg q">Why is this sample work order still open?</div>
+        <div class="msg a">The example points to a missing component entry in a sample record. The suggested next step links back to the relevant procedure for review.<small>Source: sample procedure · illustrative query</small></div>
+      </div>
+      <div class="chips" id="ns-chips">
+        <button class="chip" type="button" data-q="0">Any other open work orders like that?</button>
+        <button class="chip" type="button" data-q="1">How do I reverse a wrong inventory adjustment?</button>
+        <button class="chip" type="button" data-q="2">Can you just fix it for me?</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="case" role="tabpanel" id="venture" aria-labelledby="t-venture" hidden>
+    <div class="txt">
+      <div class="eyebrow">Co-founder · AI consultancy for SMEs</div>
+      <h2>A connected client-acquisition and delivery workflow</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>The original workflow connected outreach, quoting, follow-up and project tracking.</dd></div>
+        <div><dt>What we built</dt><dd>The full channel: outbound email, an interactive quoting tool, a custom CRM with a conversion funnel. The demo uses fictional names and sample states.</dd></div>
+      </dl>
+      <p class="result">A connected workflow for outreach, quoting, follow-up and project tracking.</p>
+      <div class="stack"><span>AI-assisted development</span><span>email deliverability</span><span>CRM</span><span>analytics</span></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Engagement tracker · fictitious companies</span><button class="btn small primary" type="button" id="vt-run">▶ Simulate a visit</button></div>
+      <div class="score-row">
+        <span>Email authentication</span>
+        <span class="gauge"><span class="gfill" style="width:52%"></span></span>
+        <b class="ok">Setup review</b>
+      </div>
+      <div class="tracker" id="vt-list">
+        <div class="trow head"><span>Company</span><span>Opened</span><span>Read</span><span>Quote</span></div>
+        <div class="trow"><span>Account A</span><span class="ok">✓</span><span><i class="sbar"><i style="width:100%"></i></i>Sample</span><span class="ok">Yes</span></div>
+        <div class="trow"><span>Account B</span><span class="ok">✓</span><span><i class="sbar"><i style="width:60%"></i></i>Sample</span><span class="t">—</span></div>
+        <div class="trow"><span>Account C</span><span class="t">—</span><span><i class="sbar"><i style="width:0%"></i></i>—</span><span class="t">—</span></div>
+      </div>
+      <p class="note">Tracks what each company does with the proposal, with no personal data collected from anyone.</p>
+    </div>
+  </section>
+
+  <section class="case" role="tabpanel" id="project" aria-labelledby="t-project" hidden>
+    <div class="txt">
+      <div class="eyebrow">Personal AI automation project</div>
+      <h2>A scheduled assistant for reviewing new listings</h2>
+      <dl>
+        <div><dt>Problem</dt><dd>Reviewing a large weekly inflow of public listings by hand is slow, and most items don't meet the criteria that matter.</dd></div>
+        <div><dt>What I built</dt><dd>A scheduled AI routine that collects new listings, applies explicit rules, scores what's left and sends a short list to a mobile page where I approve or discard with one tap. Approved items get a first draft of the follow-up document, and a person always makes the final call.</dd></div>
+      </dl>
+      <p class="result">The workflow gathers new listings, applies explicit rules and presents a concise review list.</p>
+      <div class="stack"><span>Claude Code</span><span>Python</span><span>scheduled routines</span><span>Gmail API</span></div>
+    </div>
+    <div class="demo">
+      <div class="demo-head"><span class="cap">Illustrative example data</span><button class="btn small primary" type="button" id="fn-run">▶ Run triage</button></div>
+      <div class="bars">
+        <div class="bar"><span>Collected</span><span class="track"><span class="fill" data-w="100"></span></span><span class="v">Ready</span></div>
+        <div class="bar"><span>Pass rules</span><span class="track"><span class="fill" data-w="32"></span></span><span class="v">Checked</span></div>
+        <div class="bar"><span>Shortlist</span><span class="track"><span class="fill" data-w="3" style="background:var(--good)"></span></span><span class="v">Review</span></div>
+      </div>
+      <ul class="short">
+        <li>Sample A · fits the stated rules<b>Ready</b></li>
+        <li>Sample B · needs a closer look<b>Review</b></li>
+        <li>Sample C · fits the stated rules<b>Ready</b></li>
+      </ul>
+      <p class="note">Same pattern as my work systems: rules first, AI where judgement helps, and a person approves.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Get in touch</h2>
+    <p class="note" id="about" style="font-size:17px;color:var(--muted)">Based in Sydney. I work across data analytics, business intelligence, operations, process automation and systems integration. Interactive examples are labeled illustrative demonstrations.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:bautinasta@gmail.com">bautinasta@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/bautista-nasta" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="mailto:bautinasta@gmail.com">Email ↗</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+  const track = () => {};
+  const ref = "";
+  const TABS = ["reporting", "twin", "agents", "netsuite", "venture", "project"];
+
+  function show(id, focus) {
+    if (!TABS.includes(id)) id = "reporting";
+    TABS.forEach(t => {
+      $(t).hidden = t !== id;
+      const b = $("t-" + t);
+      b.setAttribute("aria-selected", t === id);
+      b.tabIndex = t === id ? 0 : -1;
+    });
+    if (focus) $("t-" + id).focus();
+    track("set", "tab", id); track("event", "tab_" + id);
+  }
+  document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
+    show(b.dataset.tab);
+    try { history.replaceState(null, "", "#" + b.dataset.tab); } catch (e) {}
+  }));
+  document.querySelector(".tablist").addEventListener("keydown", e => {
+    const i = TABS.indexOf(document.activeElement.dataset.tab);
+    if (i < 0) return;
+    if (e.key === "ArrowRight") show(TABS[(i + 1) % TABS.length], true);
+    if (e.key === "ArrowLeft") show(TABS[(i + TABS.length - 1) % TABS.length], true);
+  });
+  document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
+    show(b.dataset.go);
+    document.querySelector(".tabs").scrollIntoView({behavior: reduce ? "auto" : "smooth", block: "start"});
+  }));
+  show((location.hash || "").slice(1));
+  window.addEventListener("hashchange", () => show(location.hash.slice(1)));
+
+  // La demo del Dashboard Hub hereda el origen de la visita (si vino de una carta, sigue contando para esa empresa)
+  document.querySelectorAll(".opslink").forEach(a => { a.href = "ops/?r=" + (ref || "portfolio"); });
+  document.querySelectorAll("[data-track]").forEach(a => a.addEventListener("click", () => track("event", a.dataset.track)));
+  // Galería del gemelo digital: 5 capturas + carteles antes/después con deslizador
+  const TW = [
+    ["01", "Overview of the plant in 3D: glass blocks for each process area, loading docks, the data flow and a second plant marked “coming soon”."],
+    ["02", "An illustrative dashboard view with a 3D facility model, area navigation and status panels."],
+    
+    ["04", "Top-down view of the same 3D world: the full floor plan."],
+    ["05", "Framing by building: one click flies the camera to each one."],
+    ["ba", "Compare two layouts for the same illustrated facility view."]
+  ];
+  const twMain = $("tw-main"), twCap = $("tw-cap"), twThumbs = $("tw-thumbs");
+  function twShow(i) {
+    const [k, cap] = TW[i];
+    twMain.className = "gal-main" + (k === "ba" ? " ba" : "");
+    twMain.innerHTML = k === "ba"
+      ? '<img src="twin/06.jpg" alt="Before: all labels shown at once, overlapping" width="1600" height="900"><img class="after" src="twin/07.jpg" alt="After: labels by level, no overlaps" width="1600" height="900"><span class="line"></span><span class="tagb l">Before</span><span class="tagb r">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after">'
+      : `<img src="twin/${k}.jpg" alt="${cap.replace(/"/g, "&quot;")}" width="1600" height="900" decoding="async">`;
+    if (k === "ba") { const r = twMain.querySelector("input"); r.addEventListener("input", () => twMain.style.setProperty("--cut", r.value + "%")); twMain.style.setProperty("--cut", "50%"); }
+    twCap.innerHTML = `<b>${i + 1}/${TW.length}</b>${cap}`;
+    twThumbs.querySelectorAll(".thumb").forEach((b, j) => b.setAttribute("aria-pressed", j === i));
+  }
+  twThumbs.innerHTML = TW.map(([k], i) => `<button class="thumb" type="button" aria-label="Screenshot ${i + 1}"><img src="twin/${k === "ba" ? "07" : k}.jpg" alt="" loading="lazy" decoding="async"></button>`).join("");
+  twThumbs.addEventListener("click", e => { const b = e.target.closest(".thumb"); if (!b) return; const i = [...twThumbs.children].indexOf(b); twShow(i); track("event", "twin_" + TW[i][0]); });
+  twShow(0);
+
+  $("ag-acts").addEventListener("click", e => {
+    const b = e.target.closest("[data-ag]"); if (!b) return;
+    track("event", "demo_agents_" + b.dataset.ag);
+    const st = $("ag-status");
+    if (b.dataset.ag === "review") {
+      $("ag-diff").hidden = !$("ag-diff").hidden;
+      b.textContent = $("ag-diff").hidden ? "Review changes" : "Hide changes";
+      return;
+    }
+    $("ag-acts").hidden = true; st.hidden = false;
+    st.className = "status " + (b.dataset.ag === "approve" ? "done" : "no");
+    st.innerHTML = b.dataset.ag === "approve"
+      ? "<span>✓ <b>Demo approved.</b> Sample changes only; no production data is written.</span>"
+      : "<span><b>Nothing written.</b> The agent logs the rejection and the records stay as they were.</span>";
+    const r = document.createElement("button");
+    r.className = "btn small"; r.type = "button"; r.textContent = "Reset demo";
+    r.onclick = () => { st.hidden = true; $("ag-acts").hidden = false; };
+    st.appendChild(r);
+  });
+
+  const QA = [
+    ["Any other open work orders like that?", "The demo has two more sample records with the same issue. Review the linked procedure before choosing a next step.", "Demo query · illustrative data"],
+    ["How do I reverse a wrong inventory adjustment?", "The example suggests recording an adjustment with a reference to the original entry, then following the documented review process.", "Sources: runbook \"Inventory adjustments\" · reference guide"],
+    ["Can you just fix it for me?", "I can prepare the transfer receipt for you to review, but I don't write to NetSuite myself. A person with the right role approves every change.", "Policy: human sign-off on every write"]
+  ];
+  $("ns-chips").addEventListener("click", async e => {
+    const c = e.target.closest("[data-q]"); if (!c || c.disabled) return;
+    c.disabled = true;
+    track("event", "demo_netsuite_q" + c.dataset.q);
+    const [q, a, src] = QA[+c.dataset.q], chat = $("ns-chat");
+    const qe = document.createElement("div"); qe.className = "msg q"; qe.textContent = q; chat.appendChild(qe);
+    const el = document.createElement("div"); el.className = "msg a"; el.textContent = "…"; chat.appendChild(el);
+    chat.scrollTop = chat.scrollHeight;
+    await wait(450);
+    if (reduce) el.textContent = a;
+    else {
+      el.textContent = "";
+      for (const w of a.split(" ")) { el.textContent += (el.textContent ? " " : "") + w; chat.scrollTop = chat.scrollHeight; await wait(28); }
+    }
+    const s = document.createElement("small"); s.textContent = src; el.appendChild(s);
+    chat.scrollTop = chat.scrollHeight;
+  });
+
+  const STEPS = [["✓ Source ready", "ok"], ["✓ Checked", "ok"], ["⏸ held for review", "hold"], ["✓ Prepared", "ok"], ["✓ Ready", "ok"]];
+  let running = false;
+  $("rp-run").addEventListener("click", async () => {
+    if (running) return; running = true; track("event", "demo_reporting_run"); $("rp-run").disabled = true;
+    const steps = [...$("rp-pipe").children];
+    $("rp-cap").textContent = "Running now · fictitious data";
+    steps.forEach(s => { s.className = "step wait"; const t = s.querySelector(".t"); t.className = "t"; t.textContent = "waiting"; });
+    for (let i = 0; i < steps.length; i++) {
+      const s = steps[i], t = s.querySelector(".t");
+      s.className = "step run"; t.textContent = "running";
+      await wait(650);
+      s.className = "step"; t.textContent = STEPS[i][0]; t.className = "t " + STEPS[i][1];
+    }
+    $("rp-cap").textContent = "Demo complete · one sample record held for review";
+    running = false; $("rp-run").disabled = false;
+  });
+
+  let vtDone = false;
+  $("vt-run").addEventListener("click", async () => {
+    if (vtDone) return; vtDone = true; track("event", "demo_venture_visit"); $("vt-run").disabled = true;
+    const row = $("vt-list").children[3], cells = row.children;
+    row.classList.add("flash");
+    cells[1].className = "ok"; cells[1].textContent = "✓";
+    await wait(500);
+    const bar = cells[2].querySelector(".sbar i");
+    let secs = 0;
+    for (let k = 0; k <= 10; k++) { bar.style.width = (k * 8.5) + "%"; cells[2].lastChild.textContent = "Sample"; await wait(120); }
+    await wait(300);
+    cells[3].className = "ok"; cells[3].textContent = "Viewed";
+    $("vt-run").textContent = "✓ Sample visit";
+    setTimeout(() => row.classList.remove("flash"), 1500);
+  });
+
+  const fills = [...document.querySelectorAll(".fill")];
+  fills.forEach(f => f.style.width = f.dataset.w + "%");
+  $("fn-run").addEventListener("click", async () => {
+    $("fn-run").disabled = true;
+    fills.forEach(f => f.style.width = "0%");
+    await wait(250);
+    for (const fill of fills) { fill.style.width = fill.dataset.w + "%"; await wait(350); }
+    $("fn-run").textContent = "Demo complete - run again";
+    $("fn-run").disabled = false;
+  });
+
+})();
+</script>
+
+</body>
+</html>
